@@ -1,8 +1,12 @@
-# Project Title
+# ASL Fingerspelling Bee
 
 ## Overview
 
-*(Please give an overview of your project. It should include the motivation, the purpose and the potential users of the proposed application )*
+ASL Fingerspelling Bee is an American Sign Language (ASL) fingerspelling reference and practice app. It is intended to be used as a tool to learn and practice the American Manual Alphabet through the use of flash cards and quizzes.
+
+It can be difficult for ASL learners to find resources that clearly depict the manual letters. ASL Fingerspelling Bee is intended to provide clear, easy-to-follow graphics to teach users the manual signs for each letter. Some learners are also limited in their exposure to other signers, limiting their ability to develop and practice their receptive language skills in fingerspelling. Another obstacle to learning is that beginning learners often find the speed at which fluent ASL signers fingerspell make it difficult to practice comprehension (Kemp, 1998). This app utilizes flash cards and quizzes to provide an opportunity for users to practice their reading abilities and to test their comprehension using static images of manual letters.
+
+Potential users of this application would be beginning ASL learners of all ages and those who wish to practice their receptive skills of the American Manual Alphabet.  It would also be used by ASL teachers, who will use it as a reference guide and learning reinforcement tool for students inside and outside of the classroom.  It is expected that learner users of this app may be hearing or Deaf.
 
 ## Related Work
 
