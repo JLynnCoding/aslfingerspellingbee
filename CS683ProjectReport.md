@@ -10,7 +10,25 @@ Potential users of this application would be beginning ASL learners of all ages 
 
 ## Related Work
 
-*(Please describe any similar applications that you have found through the online research, and the differences between your application and those applications.)*
+There are several American Manual Alphabet/fingerspelling-focused apps in the Google Play store.  Some of the apps were poorly maintained and were too glitchy to use, with other users describing similar experiences in their reviews of them in the app store. I tried every related free app, several of which provided more insight for the development of my app.
+
+The ASL Fingerspelling Alphabet by Teachers Paradise Studios focused on providing flashcards for the manual signs with sounds and tasking users to trace the written capital and lowercase English letters underneath the corresponding signs (see Figure 2.1). The manual signs are shown using a photo of a light-skinned hand demonstrating each letter sign. ASL Fingerspelling Bee will utilize black and white graphics depicting each hand sign to provide a more inclusive demonstration for learners of all skin tones. It will also omit the use of sounds to demonstrate the pronunciation of each letter because Deaf learners would not benefit from this feature and it reduces resources devoted to a feature that would not benefit all learners.
+
+![Screenshot_20200519-032056_ASL American Sign Language_5](app/src/main/res/mipmap-hdpi/Screenshot_20200519-032056_ASL%20American%20Sign%20Language_5.png)
+
+Figure 2.1: “ABC Trace” in ASL Fingerspelling Alphabet app
+
+ASL Fingerspelling by Sefol UG focuses on a single timed quiz activity, which automatically begins a few seconds after opening the app, even if the user doesn’t touch the “Start” button.  It displays a black-and-white photo of 1-3 manual signs with their corresponding English letter underneath and alternates these with quiz questions that display a photo of previously shown manual letter, tasking the user to select the correct English letter from three letter choices beneath it (see Figure 2.2).  The user is informed of a correct choice when the next screen displays the text “Yes!” at the top and a wrong answer with a screen that says “Sorry. Wrong.” and displays the correct letter underneath the photo. It provides a running summary of the user’s score over the entire history of the app. ASL Fingerspelling Bee will provide a similar quiz functionality as one of its features but it will be separate from the learning flashcards and users must choose this activity from a menu.
+
+ ![Screenshot_20200519-032128_ASL Fingerspelling](app/src/main/res/mipmap-hdpi/Screenshot_20200519-032128_ASL%20Fingerspelling.png)
+
+Figure 2.2: ASL Fingerspelling app
+
+AJM13’s Learn ASL Fingerspelling would be the closest to ASL Fingerspelling Bee in functionality.  It utilizes blue and white graphics to depict each letter of the American Manual Alphabet and provides a chart of the alphabet, flash cards of the signs (see Figure 2.3), a “Sign Test” that asks users to identify the English letter from its corresponding manual sign, a “Letter Test” that asks users to select the sign for the English letter being shown, and a “Name Test” that asks users to type a name from signs being shown one at a time. ASL Fingerspelling Bee will provide similar features, as well as additional features to build receptive language skills such as spelling quizzes for beginners that show static images of fingerspelled words.
+
+![Screenshot_20200519-033051_ASL Fingerspelling](app/src/main/res/mipmap-hdpi/Screenshot_20200519-033051_ASL%20Fingerspelling.png)
+
+Figure 2.3: A-Z Signs in the Learn ASL Fingerspelling app
 
 ## Proposed High level Requirements
 
