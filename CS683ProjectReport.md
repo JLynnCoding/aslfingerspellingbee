@@ -85,14 +85,9 @@ Figure 2.3: A-Z Signs in the Learn ASL Fingerspelling app
 2. **Title**: Shake to Shuffle Flash Cards
 
 
-**Description**: As a user, I want to be able to shuffle the flash cards
-by shaking the phone, so I can easily change the order of the cards to
-make it more challenging.
+**Description**: As a user, I want to be able to shuffle the flash cards by shaking the phone, so I can easily change the order of the cards to make it more challenging.
 
-   **Acceptance Tests**: When the user shakes the phone, the flash cards
-   will be shuffled. The user touching the screen to proceed to the next
-   card will result in a random card being shown instead of only the
-   card that follows in the English alphabet.
+**Acceptance Tests**: When the user shakes the phone, the flash cards will be shuffled. The user touching the screen to proceed to the next card will result in a random card being shown instead of only the card that follows in the English alphabet.
 
 3. **Title**: ASL Intermediate Spelling Bee
 
@@ -117,10 +112,12 @@ make it more challenging.
 **Description**: As a user, I want to be able to see a history of my accuracy with each activity, so I can track my performance over time.
 
 2. **Title**:  Add Numbers
-Description: As a user, I want to be able to study ASL number signs, so I can learn to sign number in ASL.
+
+**Description**: As a user, I want to be able to study ASL number signs, so I can learn to sign number in ASL.
 
 3. **Title**:  ASL Manual Alphabet Quiz
-Description: As a user, I want to be able to select an ASL manual letter to correspond with a displayed English letter, so I can practice discerning between signs.
+
+**Description**: As a user, I want to be able to select an ASL manual letter to correspond with a displayed English letter, so I can practice discerning between signs.
 
 4. **Title**:  Hangman Game
 
@@ -128,9 +125,7 @@ Description: As a user, I want to be able to select an ASL manual letter to corr
 
 5. **Title**: Advanced Spelling Bee
 
-**Description**: As a user, I want to practice interpreting fingerspelling
-from real hands signing, so I can advance my fingerspelling interpreting
-on scenarios that mimic real-world circumstances.
+**Description**: As a user, I want to practice interpreting fingerspelling from real hands signing, so I can advance my fingerspelling interpreting on scenarios that mimic real-world circumstances.
 
 ## Android Components and Features To Be Used
 
