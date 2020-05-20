@@ -34,27 +34,120 @@ Figure 2.3: A-Z Signs in the Learn ASL Fingerspelling app
 
 ### Essential Features: 
 
-*(Please describe all essential features that your application will have. For each feature, please give a feature title, a brief description, possible acceptance tests, as well as one or multiple mock-up screen(s) if applicable.)* 
+1. **Title**: ASL Alphabet Reference Chart
 
-*For example:*
+**Description**: As a user, I want to see the entire ASL alphabet in one place with their corresponding letters, so I have a quick reference.
 
-**1. List all projects:** *As a user, I would like to see all my projects in the system, so that I can have a good overview.*
+**Acceptance Tests**: The screen will display a chart containing graphics for each letter in the American Manual Alphabet with its corresponding English letter underneath.
 
-    Acceptance test:
-    
+![ASLAlphabetChart_1](app/src/main/res/mipmap-hdpi/ASLAlphabetChart_1.png)
 
+2. **Title**: ASL Alphabet Flashcards
+
+**Description**: As a user, I want to have flash cards that allow me to practice testing myself on identifying the English letter for each ASL manual letter, so I can improve my receptive ASL fingerspelling skills.
+
+**Acceptance Tests**: The ASL Alphabet Flash Cards will display a sign on the screen and will display the corresponding letter upon the user touching the screen.
+
+![ASLFlashCards](app/src/main/res/mipmap-hdpi/ASLFlashCards.png)
+
+3. **Title**: ASL Beginner Spelling Bee
+
+**Description**: As a user, I want to test my ability to read words spelled in the ASL manual alphabet, so I can practice my receptive ASL fingerspelling skills.
+
+**Acceptance Tests**: The ASL Beginner Spelling Bee will display a short word at the top of the page using graphics of manual hand signs.  The user will enter the corresponding English words and click submit.  Upon clicking submit, the app will display whether the user’s answer was correct or incorrect.
+
+![ASLBeginnerSpellingBee](app/src/main/res/mipmap-hdpi/ASLBeginnerSpellingBee.png)
+
+4. **Title**: ASL Letter Quiz
+
+**Description**: As a user, I want to test my ability to recognize an English letter from its ASL manual letter, so I can properly interpret fingerspelled words.
+
+**Acceptance Tests**: The ASL Letter Quiz will display a graphic of a manual sign at the top of the page.  The user will enter the corresponding English letter and click submit.  Upon clicking submit, the app will display whether the user’s answer was correct or incorrect.
+
+![ASLLettersQuiz](app/src/main/res/mipmap-hdpi/ASLLettersQuiz.png)
+
+5. **Title**: Main Menu/Simple Layout
+
+**Description**: As a user, I want a graphical menu, so I can easily access the activities I want.
+
+**Acceptance Tests**: The Main Menu will provide a simple graphical interface for the user to choose their desired activity.
 
 ### Desirable Features
 
-*(Please describe all desirable features that your application would like to have. For each feature, please give a feature title, a brief description, possible acceptance tests, as well as one or multiple mock-up screen(s) if apply.)*
+1.	**Title**: Reverse Flash Cards
+
+**Description**: As a user, I want to have flash cards that allow me to test myself on identifying the ASL manual letter that corresponds with the  English letter show, so I can practice my receptive ASL fingerspelling skills.
+
+**Acceptance Tests**: The screen will display an English letter and will display the corresponding manual letter upon the user touching the screen.
+
+![ReverseASLFlashCards](app/src/main/res/mipmap-hdpi/ReverseASLFlashCards.png)
+
+2. **Title**: Shake to Shuffle Flash Cards
+
+
+**Description**: As a user, I want to be able to shuffle the flash cards
+by shaking the phone, so I can easily change the order of the cards to
+make it more challenging.
+
+   **Acceptance Tests**: When the user shakes the phone, the flash cards
+   will be shuffled. The user touching the screen to proceed to the next
+   card will result in a random card being shown instead of only the
+   card that follows in the English alphabet.
+
+3. **Title**: ASL Intermediate Spelling Bee
+
+**Description**: As a user, I want to test my ability to read words fingerspelled one letter at a time, so I can improve my ability to interpret fingerspelled words.
+
+**Acceptance Tests**: The ASL Intermediate Spelling Bee will display a short English word at the top of the page using graphics of manual hand signs, one letter at a time (like a slideshow).  The user will enter the corresponding English letters of the word and click submit.  Upon clicking submit, the app will display whether the user’s answer was correct or incorrect.
+
+![ASLIntermediateSpellingBee](app/src/main/res/mipmap-hdpi/ASLIntermediateSpellingBee.png)
+
+4.	**Title**: Practice Reminder Notification
+
+**Description**: As a user, I want to be reminded when I haven’t practiced recently, so I study more consistently and effectively.  Notifications have been shown to increase quick learning sessions that are effective for microlearning of languages (Dingler, et al., 2017).
+
+**Acceptance Tests**: A push notification will be sent when the user hasn’t opened the ASL Fingerspelling Bee app in the last 48 hours.
+
+![PracticeReminderNotifications](app/src/main/res/mipmap-hdpi/PracticeReminderNotifications.png)
 
 ### Optional Features
 
-*(Please describe all optional features that your application would like to have if the time permits. For each feature, please give a feature title and a brief description.)*
+1. **Title**:  Score Tracking
+
+**Description**: As a user, I want to be able to see a history of my accuracy with each activity, so I can track my performance over time.
+
+2. **Title**:  Add Numbers
+Description: As a user, I want to be able to study ASL number signs, so I can learn to sign number in ASL.
+
+3. **Title**:  ASL Manual Alphabet Quiz
+Description: As a user, I want to be able to select an ASL manual letter to correspond with a displayed English letter, so I can practice discerning between signs.
+
+4. **Title**:  Hangman Game
+
+**Description**: As a user, I want to play a game of Hangman using an American Manual Alphabet keyboard, to practice my expressive ASL fingerspelling skills in a fun way.
+
+5. **Title**: Advanced Spelling Bee
+
+**Description**: As a user, I want to practice interpreting fingerspelling
+from real hands signing, so I can advance my fingerspelling interpreting
+on scenarios that mimic real-world circumstances.
 
 ## Android Components and Features To Be Used
 
-*(Please specify basic android components and features your application plans to have. Here is a list of components/features you can use: activities, databases and/or content providers, files, settings (through sharedpreferences), services, broadcast receivers, multi-threaded, multi-process, animation, graphics, remote server connection, GPS, microphone, camera, or other sensors, google APIs, etc. For each android component/feature, briefly describe how this can be fit into your application).*
+ASL Fingerspelling Bee will utilize the following Android components and features:
+
+•	Android UI Layouts: Android UI layouts will be used to design the UI for all of the app’s features.
+
+•	Android Graphics: Android Graphics will be used in designing the look of the app and displaying the appropriate graphics of the American Manual Alphabet.
+
+•	Touch Device: The touch screen sensor will be used to implement virtual keys and to control the navigation and usage of ASL Fingerspelling Bee’s features.
+
+•	Notifications: Notifications will be used to push a notification to a user to remind them to practice their fingerspelling skills if they have not used the app for more than 48 	hours.
+
+•	Accelerometer: The accelerometer motion sensor will be used to detect shaking for the flash card shuffle feature.
+
+•	SQLite Database: An SQLite database will be used to track user’s scores over time.
+
 
 ## Timeline
 
