@@ -153,13 +153,13 @@ ASL Fingerspelling Bee will utilize the following Android components and feature
 
 *(Please provide a detailed plan/description to specify when the above requirements and android features will be/are implemented. This should be updated in every iteration.)*
 
-|Iteration | Application Requirements (E/D/O) | Android Components and Features| 
-|---|---|---|
-|1| | |
-|2| | |
-|3| | |
-|4| | |
-|5| | |
+| Iteration | Application Requirements (E/D/O)                                                           | Android Components and Features                                     |
+|:----------|:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------|
+| 1         | Main Menu/Simple Layout; ASL Alphabet Reference Chart                                      | Android UI Layouts, Android Graphics, Touch Device                  |
+| 2         | ASL Alphabet Flashcards; ASL Beginner Spelling Bee                                         | Android UI Layouts, Android Graphics, Touch Device                  |
+| 3         | ASL Letter Quiz; Reverse Flashcards; Shake to Shuffle Flashcards                           | Android UI Layouts, Android Graphics, Touch Device, Accelerometer   |
+| 4         | ASL Intermediate Spelling Bee; Practice Reminder Notification                              | Android UI Layouts, Android Graphics, Touch Device, Notifications   |
+| 5         | Score Tracking; Add Numbers; ASL Manual Alphabet Quiz; Hangman Game; Advanced Spelling Bee | Android UI Layouts, Android Graphics, Touch Device, SQLite Database |
 
 ## Requirement Analysis and Testing 
 
@@ -175,4 +175,7 @@ ASL Fingerspelling Bee will utilize the following Android components and feature
 
 ## References
 
-*(Please list all your references here)*
+Dingler, T., Weber, D., Pielot, M., Cooper, J., Chung-Cheng, C., & Henze, N. (2017). Language Learning On-The-Go: Opportune Moments and Design of Mobile Microlearning Sessions. MobileHCI '17: Proceedings of the 19th International Conference on Human-Computer Interaction with Mobile Devices and Services (pp. 1-12). Vienna, Austria: Association for Computing Machinery.
+
+Kemp, M. (1998). Why is Learning American Sign Language a Challenge? American Annals of the Deaf, 255-259.
+
