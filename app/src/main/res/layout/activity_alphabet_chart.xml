@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlphabetChartActivity" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:contentDescription="@string/asl_fingerspelling_bee_logo"
+            android:src="@drawable/asl_fingerspelling_bee_logo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Aa" />
+                <TextView
+                    android:text="Bb"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Cc"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/a" />
+                <ImageView
+                    android:src="@drawable/b"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/c"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Dd" />
+                <TextView
+                    android:text="Ee"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Ff"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/d" />
+                <ImageView
+                    android:src="@drawable/e"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/f"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Gg" />
+                <TextView
+                    android:text="Hh"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Ii"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/g" />
+                <ImageView
+                    android:src="@drawable/h"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/i"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Jj" />
+                <TextView
+                    android:text="Kk"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Ll"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/j" />
+                <ImageView
+                    android:src="@drawable/k"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/l"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Mm" />
+                <TextView
+                    android:text="Nn"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Oo"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/m" />
+                <ImageView
+                    android:src="@drawable/n"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/o"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Pp" />
+                <TextView
+                    android:text="Qq"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Rr"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/p" />
+                <ImageView
+                    android:src="@drawable/q"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/r"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Ss" />
+                <TextView
+                    android:text="Tt"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Uu"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/s" />
+                <ImageView
+                    android:src="@drawable/t"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/u"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Vv" />
+                <TextView
+                    android:text="Ww"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Xx"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/v" />
+                <ImageView
+                    android:src="@drawable/w"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <ImageView
+                    android:src="@drawable/x"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Yy" />
+                <TextView
+                    android:text="Zz"
+                    android:gravity="center"
+                    android:padding="3dip" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/y" />
+                <ImageView
+                    android:src="@drawable/z"
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip" />
+
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>
