@@ -14,13 +14,14 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView (R.layout.activity_main_menu);
     }
 
-    public void onClickAlphabetChart(View view) {
+    public void newClick(View view) {
         Intent intent = new Intent(this, AlphabetChartActivity.class);
         startActivity(intent);
     }
 
     public void flashcardClick(View view) {
-
+        Intent intent = new Intent(this, FlashcardActivity.class);
+        startActivity(intent);
     }
 
 

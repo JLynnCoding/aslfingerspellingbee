@@ -18,13 +18,14 @@
         android:id="@+id/alphabetChartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickAlphabetChart"
+        android:onClick="newClick"
         android:text="@string/asl_alphabet_chart"/>
 
     <Button
         android:id="@+id/alphabetFlashCards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="flashcardClick"
         android:text="@string/asl_alphabet_flashcards"/>
 
 </LinearLayout>
