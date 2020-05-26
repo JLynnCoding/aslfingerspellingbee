@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Main Menu Layout-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +19,7 @@
         android:id="@+id/alphabetChartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="newClick"
+        android:onClick="alphabetChartClick"
         android:text="@string/asl_alphabet_chart"/>
 
     <Button

@@ -1,3 +1,8 @@
+/**
+ * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
+ * Class that creates and manages ArrayList for alphabet and provides data needed for app features.
+ */
+
 package edu.bu.metcs.activitylifecycle;
 
 import java.util.ArrayList;
@@ -8,6 +13,10 @@ public class Alphabet {
     ArrayList<String> alphabet;
     int currentPosition;
 
+    /**
+     * Loads alphabet in ArrayList for easy reference and changing of order, as needed by different
+     * activities in the application.
+     */
     public Alphabet() {
         alphabet = new ArrayList<>();
         String letters = "abcdefghijklmnopqrstuvwxyz";
@@ -18,23 +27,39 @@ public class Alphabet {
         currentPosition = 0;
     }
 
+    /**
+     * Provides capital and lowercase letter in String to be displayed for English reference with
+     * corresponding hand sign.
+     */
     public String getLetterDisplay(String letter) {
         return letter.toUpperCase() + letter;
     }
 
+    /**
+     * Random letter getting for future features.
+     */
     public String getRandomLetter() {
         Random randomNumber = new Random();
         return alphabet.get(randomNumber.nextInt(alphabet.size()));
     }
 
+    /**
+     * Allows direct access to letter at certain index for use with image name in activity.
+     */
     public String getCurrentLetter() {
         return alphabet.get(currentPosition);
     }
 
+    /**
+     * Gets formatted display of the current letter.
+     */
     public String getCurrentLetterDisplay() {
         return getLetterDisplay(getCurrentLetter());
     }
 
+    /**
+     * Iterates through the ArrayList and returns to beginning when it reaches the end.
+     */
     public String getNextLetter() {
         currentPosition++;
         if (currentPosition >= alphabet.size()) {

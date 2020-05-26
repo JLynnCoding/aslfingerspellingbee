@@ -1,3 +1,8 @@
+/**
+ * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
+ * Activity for Main Menu.
+ */
+
 package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +19,17 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView (R.layout.activity_main_menu);
     }
 
-    public void newClick(View view) {
+    /**
+     * Starts AlphabetChartActivity intent.
+     */
+    public void alphabetChartClick(View view) {
         Intent intent = new Intent(this, AlphabetChartActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Starts FlashcardActivity intent.
+     */
     public void flashcardClick(View view) {
         Intent intent = new Intent(this, FlashcardActivity.class);
         startActivity(intent);
