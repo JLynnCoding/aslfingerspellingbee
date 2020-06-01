@@ -35,6 +35,12 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Starts ASL Beginner Spelling Bee intent.
+     */
+    public void beginnerSpellingClick(View view) {
+        Intent intent = new Intent(this, BeginnerSpellingBeeActivity.class);
+        startActivity(intent);
+    }
 
 }

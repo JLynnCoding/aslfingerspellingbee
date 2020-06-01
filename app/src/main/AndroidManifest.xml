@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".BeginnerSpellingBeeActivity"></activity>
         <activity android:name=".FlashcardActivity" />
         <activity android:name=".AlphabetChartActivity" />
         <activity android:name=".MainMenuActivity">

@@ -29,4 +29,10 @@
         android:onClick="flashcardClick"
         android:text="@string/asl_alphabet_flashcards"/>
 
+    <Button
+        android:id="@+id/beginnerspellingbee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="beginnerSpellingClick"
+        android:text="@string/asl_beginner_spellingbee"/>
 </LinearLayout>
