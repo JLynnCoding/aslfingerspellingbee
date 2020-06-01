@@ -20,7 +20,7 @@
         android:id="@+id/flashcard_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ASL Alphabet Flashcards"
+        android:text="@string/asl_alphabet_flashcards"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="ANSWER"
+        android:text="@string/answer"
         android:onClick="onClickRevealAnswer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,11 +73,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="next Card"
+        android:text="@string/next_card"
         android:onClick="onClickNextCard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/letterSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/letter_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flashcard_heading" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

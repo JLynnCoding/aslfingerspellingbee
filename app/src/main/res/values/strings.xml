@@ -4,4 +4,7 @@
     <string name="asl_alphabet_chart">ASL Alphabet Chart</string>
     <string name="asl_alphabet_flashcards">ASL Alphabet Flashcards</string>
     <string name="asl_beginner_spellingbee">ASL Beginner Fingerspelling Bee</string>
+    <string name="next_card">Next Card</string>
+    <string name="answer">ANSWER</string>
+    <string name="letter_first">Letter First</string>
 </resources>
