@@ -135,6 +135,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         nextWordButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.VISIBLE);
+        wordGuessText.setText("");
         getWord();
         setWord();
     }
