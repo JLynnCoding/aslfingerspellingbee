@@ -14,7 +14,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class BeginnerSpellingBeeWords {
 
@@ -43,7 +42,6 @@ public class BeginnerSpellingBeeWords {
     private void ReadFromFileUsingScanner() {
 
         AssetManager am = context.getAssets();
-
         try {
             InputStream is = am.open("beginnerspellingbeepropernouns.txt");
             Log.i(TAG, "File opened.");
