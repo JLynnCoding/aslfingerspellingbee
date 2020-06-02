@@ -1,6 +1,10 @@
 /**
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
- * Activity for Alphabet Flashcards.
+ * Activity for Alphabet Flashcards. Shows sign, then allows user to click "Answer" for the English
+ * letter.
+ * Project Iteration 2
+ * Offers reverse functionality. User can toggle letterSwitch to see the English letter first, then
+ * the ASL hand sign for that letter.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -25,7 +29,8 @@ public class FlashcardActivity extends AppCompatActivity {
     private boolean letterFirst;
 
     /**
-     * Initializes needed variables.
+     * Initializes needed variables and checks switch for user preference of letter first or sign
+     * first.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
