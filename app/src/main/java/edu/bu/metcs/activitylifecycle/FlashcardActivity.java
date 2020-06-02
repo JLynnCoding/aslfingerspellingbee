@@ -47,11 +47,19 @@ public class FlashcardActivity extends AppCompatActivity {
                 {
                     //Do something when Switch button is on/checked
                     letterFirst = true;
+                    handSignGraphic.setVisibility(View.INVISIBLE);
+                    englishLetter.setVisibility(View.VISIBLE);
+                    answerButton.setVisibility(View.VISIBLE);
+                    nextCardButton.setVisibility(View.INVISIBLE);
                 }
                 else
                 {
                     //Do something when Switch is off/unchecked
                     letterFirst = false;
+                    handSignGraphic.setVisibility(View.VISIBLE);
+                    englishLetter.setVisibility(View.INVISIBLE);
+                    answerButton.setVisibility(View.VISIBLE);
+                    nextCardButton.setVisibility(View.INVISIBLE);
                 }
             }
         }));
@@ -66,14 +74,12 @@ public class FlashcardActivity extends AppCompatActivity {
         if(letterFirst) { //Letter First Selected
             handSignGraphic.setVisibility(View.VISIBLE);
             englishLetter.setVisibility(View.INVISIBLE);
-            answerButton.setVisibility(View.VISIBLE);
-            nextCardButton.setVisibility(View.INVISIBLE);
         } else { //Sign First (Default)
             handSignGraphic.setVisibility(View.INVISIBLE);
             englishLetter.setVisibility(View.VISIBLE);
-            answerButton.setVisibility(View.INVISIBLE);
-            nextCardButton.setVisibility(View.VISIBLE);
         }
+        answerButton.setVisibility(View.INVISIBLE);
+        nextCardButton.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -83,14 +89,12 @@ public class FlashcardActivity extends AppCompatActivity {
         if(letterFirst){
             handSignGraphic.setVisibility(View.INVISIBLE);
             englishLetter.setVisibility(View.VISIBLE);
-            answerButton.setVisibility(View.INVISIBLE);
-            nextCardButton.setVisibility(View.VISIBLE);
         } else {
             handSignGraphic.setVisibility(View.VISIBLE);
             englishLetter.setVisibility(View.INVISIBLE);
-            answerButton.setVisibility(View.VISIBLE);
-            nextCardButton.setVisibility(View.INVISIBLE);
         }
+        answerButton.setVisibility(View.VISIBLE);
+        nextCardButton.setVisibility(View.INVISIBLE);
         alphabet.getNextLetter();
         setUpFlashCard();
     }

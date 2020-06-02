@@ -7,4 +7,10 @@
     <string name="next_card">Next Card</string>
     <string name="answer">ANSWER</string>
     <string name="letter_first">Letter First</string>
+    <string name="enter_guess">Enter guess...</string>
+    <string name="type_word">Type the word fingerspelled above</string>
+    <string name="submit">Submit</string>
+    <string name="next_word">Next Word</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect.</string>
 </resources>
