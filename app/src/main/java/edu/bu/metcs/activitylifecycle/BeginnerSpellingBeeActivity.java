@@ -17,6 +17,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
             letterGraphic5, letterGraphic6, letterGraphic7;
     private BeginnerSpellingBeeWords words;
     private String spellingWord;
+    private String correctWord;
     private EditText wordGuessText;
     private Button submitButton, nextWordButton;
     private TextView checkGuessDisplay;
@@ -50,7 +51,8 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     }
 
     public void getWord() {
-        spellingWord = words.getRandomWord().toLowerCase();
+        correctWord = words.getRandomWord();
+        spellingWord = correctWord.toLowerCase();
     }
 
     public void setWord() {
@@ -91,9 +93,11 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         if(guess.equals(spellingWord)) {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
+            checkGuessDisplay.setTextColor(-16777216);
         } else {
-            checkGuessDisplay.setText("Incorrect. The correct answer is " + spellingWord);
+            checkGuessDisplay.setText("Incorrect. The correct answer is " + correctWord);
             checkGuessDisplay.setBackgroundColor(-65536);
+            checkGuessDisplay.setTextColor(-1);
         }
 
         submitButton.setVisibility(View.INVISIBLE);
