@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Main Menu Layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainMenuActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo" />
+
+    <Button
+        android:id="@+id/alphabetChartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alphabetChartClick"
+        android:text="@string/asl_alphabet_chart"/>
+
+    <Button
+        android:id="@+id/alphabetFlashCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="flashcardClick"
+        android:text="@string/asl_alphabet_flashcards"/>
+
+    <Button
+        android:id="@+id/beginnerspellingbee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="beginnerSpellingClick"
+        android:text="@string/asl_beginner_spellingbee"/>
+
+    <Button
+        android:id="@+id/letterquiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="letterQuizClick"
+        android:text="@string/asl_letter_quiz"/>
+</LinearLayout>
