@@ -84,7 +84,7 @@ public class LetterQuizActivity extends AppCompatActivity {
     }
 
     /**
-     * Gets a new handsign upon the user clicking "Next".
+     * Gets a new handsign upon the user clicking the "Next" button.
      */
     public void onClickNext(View view) {
         nextButton.setVisibility(View.INVISIBLE);
