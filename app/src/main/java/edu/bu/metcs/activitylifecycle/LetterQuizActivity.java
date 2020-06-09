@@ -65,9 +65,6 @@ public class LetterQuizActivity extends AppCompatActivity {
     public void onClickSubmit(View view) {
         String guess = guessLetter.getText().toString().toLowerCase();
 
-        Log.i("Info", guess);
-        Log.i("Info", "" + englishLetter.charAt(1));
-
         if(guess.equals("" + englishLetter.charAt(1))) {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
@@ -77,7 +74,6 @@ public class LetterQuizActivity extends AppCompatActivity {
             checkGuessDisplay.setBackgroundColor(-65536);
             checkGuessDisplay.setTextColor(-1);
         }
-
         submitButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay.setVisibility(View.VISIBLE);
         nextButton.setVisibility(View.VISIBLE);
