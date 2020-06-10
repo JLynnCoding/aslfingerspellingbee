@@ -14,8 +14,9 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/logoView"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="70dp"
             android:contentDescription="@string/asl_fingerspelling_bee_logo"
             android:src="@drawable/asl_fingerspelling_bee_logo" />
 
@@ -26,6 +27,8 @@
             android:layout_gravity="center"
             android:text="ASL Alphabet Chart"
             android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 

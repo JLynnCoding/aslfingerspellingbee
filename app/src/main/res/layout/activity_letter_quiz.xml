@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="70dp"
         android:contentDescription="@string/asl_fingerspelling_bee_logo"
         android:src="@drawable/asl_fingerspelling_bee_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,8 @@
         android:text="@string/asl_letter_quiz"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoView" />

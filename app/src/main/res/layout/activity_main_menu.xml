@@ -10,8 +10,9 @@
     tools:context=".MainMenuActivity">
 
     <ImageView
+        android:id="@+id/logoView"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="70dp"
         android:contentDescription="@string/asl_fingerspelling_bee_logo"
         android:src="@drawable/asl_fingerspelling_bee_logo" />
 
@@ -20,26 +21,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="alphabetChartClick"
-        android:text="@string/asl_alphabet_chart"/>
+        android:text="@string/asl_alphabet_chart"
+        android:drawableLeft="@drawable/bee"/>
 
     <Button
         android:id="@+id/alphabetFlashCards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="flashcardClick"
-        android:text="@string/asl_alphabet_flashcards"/>
+        android:text="@string/asl_alphabet_flashcards"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
 
     <Button
         android:id="@+id/beginnerspellingbee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="beginnerSpellingClick"
-        android:text="@string/asl_beginner_spellingbee"/>
+        android:text="@string/asl_beginner_spellingbee"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
 
     <Button
         android:id="@+id/letterquiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="letterQuizClick"
-        android:text="@string/asl_letter_quiz"/>
+        android:text="@string/asl_letter_quiz"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
 </LinearLayout>
