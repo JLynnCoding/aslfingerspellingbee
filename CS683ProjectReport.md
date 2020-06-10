@@ -1,7 +1,7 @@
 # ASL Fingerspelling Bee
 
 Please see the Word Document uploaded to Blackboard entitled
-"CS683_LufranoJamie_ASLFingerspellingBee_iter3.docx" for my Project
+"CS683_LufranoJamie_ASLFingerspellingBee_iter4.docx" for my Project
 Report.
 
 My code repository can be found at:  
