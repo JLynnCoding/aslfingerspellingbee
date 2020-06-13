@@ -124,7 +124,9 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
      * Sets the image of the current flashcard.
      */
     public void setUpFlashCard() {
-        handSignGraphic.setImageResource(getResources().getIdentifier("@drawable/" + alphabet.getCurrentLetter(), null, getPackageName()));
+        handSignGraphic.setImageResource(getResources().getIdentifier("@drawable/" +
+                alphabet.getCurrentLetter(), null, getPackageName()));
+        handSignGraphic.setContentDescription("" + alphabet.getCurrentLetter());
         englishLetter.setText(alphabet.getCurrentLetterDisplay());
     }
 

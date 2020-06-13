@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:onClick="alphabetChartClick"
         android:text="@string/asl_alphabet_chart"
-        android:drawableLeft="@drawable/bee"/>
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
 
     <Button
         android:id="@+id/alphabetFlashCards"

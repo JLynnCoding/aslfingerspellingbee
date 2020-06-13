@@ -56,6 +56,7 @@ public class LetterQuizActivity extends AppCompatActivity {
     public void setUpQuiz() {
         handSignGraphic.setImageResource(getResources().getIdentifier("@drawable/" +
                 alphabet.getCurrentLetter(), null, getPackageName()));
+        handSignGraphic.setContentDescription("" + alphabet.getCurrentLetter());
         englishLetter = alphabet.getCurrentLetterDisplay();
     }
 

@@ -8,7 +8,8 @@
     <string name="answer">ANSWER</string>
     <string name="letter_first">Letter First</string>
     <string name="enter_guess">Enter guess...</string>
-    <string name="type_word">Type the word fingerspelled above</string>
+    <string name="enter_letter">Enter the English letter...</string>
+    <string name="type_word">Type the above fingerspelled word:</string>
     <string name="submit">Submit</string>
     <string name="next_word">Next Word</string>
     <string name="correct">Correct!</string>
@@ -17,4 +18,5 @@
     <string name="letter_quiz_instructions">Enter the English letter</string>
     <string name="next">Next</string>
     <string name="bee">Bee</string>
+    <string name="handsign">Handsign: </string>
 </resources>
