@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BeginnerSpellingBeeWords {
+public class SpellingBeeWords {
 
     private String TAG = "logInfo";
 
@@ -23,10 +23,10 @@ public class BeginnerSpellingBeeWords {
     private Context context; //TRYING
 
     /**
-     * Loads BeginnerSpellingBeeWords into ArrayList for easy reference and randomizing order for
+     * Loads SpellingBeeWords into ArrayList for easy reference and randomizing order for
      * use in Beginner Fingerspelling Bee.
      */
-    public BeginnerSpellingBeeWords(Context context) {
+    public SpellingBeeWords(Context context) {
         beginnerSpellingBeeWords = new ArrayList<>();
         this.context = context;
 

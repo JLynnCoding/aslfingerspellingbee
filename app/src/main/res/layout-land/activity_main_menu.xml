@@ -41,6 +41,18 @@
         android:text="@string/asl_alphabet_flashcards" />
 
     <Button
+        android:id="@+id/letterquiz"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/bee"
+        android:drawableLeft="@drawable/bee"
+        android:onClick="letterQuizClick"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/asl_letter_quiz" />
+
+    <Button
         android:id="@+id/beginnerspellingbee"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
@@ -53,15 +65,17 @@
         android:text="@string/asl_beginner_spellingbee" />
 
     <Button
-        android:id="@+id/letterquiz"
+        android:id="@+id/intermediatespellingbee"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:contentDescription="@string/bee"
         android:drawableLeft="@drawable/bee"
-        android:onClick="letterQuizClick"
+        android:onClick="intermediateSpellingClick"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        android:text="@string/asl_letter_quiz" />
+        android:text="@string/asl_intermediate_spellingbee" />
+
+
 
 </LinearLayout>

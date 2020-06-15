@@ -36,7 +36,7 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     /**
-     * Starts ASL Beginner Spelling Bee intent.
+     * Starts ASL Beginner Fingerspelling Bee intent.
      */
     public void beginnerSpellingClick(View view) {
         Intent intent = new Intent(this, BeginnerSpellingBeeActivity.class);
@@ -50,5 +50,14 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LetterQuizActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Starts ASL Intermediate Fingerspelling Bee intent.
+     */
+    public void intermediateSpellingClick(View view) {
+        Intent intent = new Intent(this, IntermediateSpellingBeeActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -14,15 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class BeginnerSpellingBeeActivity extends AppCompatActivity {
 
     // Images for fingerspelled words.
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7;
     //Instance of Words to get spelling words and helper variables.
-    private BeginnerSpellingBeeWords words;
+    private SpellingBeeWords words;
     private String spellingWord;
     private String correctWord;
     //Buttons and other changing layout elements.
@@ -54,7 +52,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         letterGraphic6 = (ImageView) findViewById(R.id.letterGraphic6);
         letterGraphic7 = (ImageView) findViewById(R.id.letterGraphic7);
 
-        words = new BeginnerSpellingBeeWords(this);
+        words = new SpellingBeeWords(this);
 
         getWord();
 
@@ -62,7 +60,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     }
 
     /**
-     * Gets a random word from the BeginnerSpellingBeeWords helper class.  Stores a copy as-is and
+     * Gets a random word from the SpellingBeeWords helper class.  Stores a copy as-is and
      * in all lowercase letters for easier access to graphics.
      */
     public void getWord() {

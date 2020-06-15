@@ -35,6 +35,15 @@
         android:contentDescription="@string/bee"/>
 
     <Button
+        android:id="@+id/letterquiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="letterQuizClick"
+        android:text="@string/asl_letter_quiz"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
         android:id="@+id/beginnerspellingbee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,11 +53,11 @@
         android:contentDescription="@string/bee"/>
 
     <Button
-        android:id="@+id/letterquiz"
+        android:id="@+id/intermediateSpellingBeeHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="letterQuizClick"
-        android:text="@string/asl_letter_quiz"
+        android:onClick="intermediateSpellingClick"
+        android:text="@string/asl_intermediate_spellingbee"
         android:drawableLeft="@drawable/bee"
         android:contentDescription="@string/bee"/>
 
