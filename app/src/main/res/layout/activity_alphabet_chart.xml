@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Alphabet Chart layout-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlphabetChartActivity" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="@string/asl_fingerspelling_bee_logo"
+            android:src="@drawable/asl_fingerspelling_bee_logo" />
+
+        <TextView
+            android:id="@+id/flashcard_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ASL Alphabet Chart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <!--Table for American Manual Alphabet-->
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/a" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/b" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/c" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="Aa"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="Bb"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="Cc"
+                    android:textColor="@color/black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/d" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/e" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/f" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Dd"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Ee"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Ff"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/g" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/h" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/i" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Gg"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Hh"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Ii"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/j" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/k" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/l" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Jj"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Kk"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Ll"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/m" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/n" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/o" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Mm"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Nn"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Oo"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/p" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/q" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/r" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Pp"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Qq"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Rr"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/s" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/t" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/u" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Ss"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Tt"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Uu"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/v" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/w" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:src="@drawable/x" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Vv"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Ww"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Xx"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:padding="3dip"
+                    android:src="@drawable/y" />
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="73dp"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:src="@drawable/z" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:padding="3dip"
+                    android:gravity="center"
+                    android:text="Yy"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:text="Zz"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textColor="@color/black" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>
