@@ -36,30 +36,29 @@
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:stretchColumns="1">
+            android:stretchColumns="*">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
 
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/a" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/b" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/c" />
             </TableRow>
@@ -92,24 +91,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/d" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/e" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/f" />
             </TableRow>
@@ -141,22 +137,20 @@
 
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/g" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/h" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/i" />
             </TableRow>
@@ -188,22 +182,20 @@
 
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/j" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/k" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/l" />
             </TableRow>
@@ -235,22 +227,20 @@
 
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/m" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/n" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/o" />
             </TableRow>
@@ -282,22 +272,20 @@
 
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/p" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/q" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/r" />
             </TableRow>
@@ -327,24 +315,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/s" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/t" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/u" />
             </TableRow>
@@ -374,24 +359,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/v" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/w" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="right"
                     android:padding="3dip"
                     android:src="@drawable/x" />
             </TableRow>
@@ -421,17 +403,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
                     android:padding="3dip"
                     android:src="@drawable/y" />
 
                 <ImageView
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
                     android:layout_height="73dp"
-                    android:gravity="center"
                     android:padding="3dip"
                     android:src="@drawable/z" />
 
@@ -455,7 +435,6 @@
             </TableRow>
 
         </TableLayout>
-
 
     </LinearLayout>
 </ScrollView>

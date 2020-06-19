@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".IntermediateSpellingBeeActivity"></activity>
+        <activity android:name=".SinkOrSignActivity"></activity>
+        <activity android:name=".IntermediateSpellingBeeActivity" />
         <activity android:name=".LetterQuizActivity" />
         <activity android:name=".BeginnerSpellingBeeActivity" />
         <activity android:name=".FlashcardActivity" />
