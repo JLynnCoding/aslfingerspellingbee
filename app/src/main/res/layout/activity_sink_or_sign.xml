@@ -6,4 +6,352 @@
     android:layout_height="match_parent"
     tools:context=".SinkOrSignActivity">
 
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sinkorsignheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/sink_or_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoView" />
+
+    <ImageView
+        android:id="@+id/sharkattack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sinkorsignheading"
+        app:srcCompat="@drawable/shark1"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic1"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic2"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic3"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic4"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic5"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic6"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic7"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic8"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic9"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic10"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic11"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic12"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/letterGraphic13"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SinkOrSignActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintStart_toStartOf="parent">
+
+            <!--Table for American Manual Alphabet-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:paddingTop = "10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/a" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/b" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/c" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/d" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/e" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/f" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/g" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/h" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/i" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/j" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/k" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/l" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/m" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/n" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/o" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/p" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/q" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/r" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/s" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/t" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/u" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/v" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/w" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/x" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/y" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="73dp"
+                        android:src="@drawable/z" />
+
+                </TableRow>
+
+            </TableLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

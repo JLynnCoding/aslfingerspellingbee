@@ -23,7 +23,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     ViewFlipper handsign_Flipper;
 
     // Variables for word data
-    private SpellingBeeWords words;
+    private SpellingWords words;
     private String correctWord;
     private String spellingWord;
 
@@ -55,8 +55,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         handsign_Flipper = findViewById(R.id.handsign_flipper);
         Log.i(TAG, "Created Flipper.");
 
-        // Create new SpellingBeeWords helper object as a source for words.
-        words = new SpellingBeeWords(this);
+        // Create new SpellingWords helper object as a source for words.
+        words = new SpellingWords(this);
 
         // Get a new word and set up appropriate flipper
         getWord();
@@ -67,7 +67,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     }
 
     /**
-     * Gets a random word from the SpellingBeeWords helper class.  Stores a copy as-is and
+     * Gets a random word from the SpellingWords helper class.  Stores a copy as-is and
      * in all lowercase letters for easier access to graphics.
      */
     public void getWord() {

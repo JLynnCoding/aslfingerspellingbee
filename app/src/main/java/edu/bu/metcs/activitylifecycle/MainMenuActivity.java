@@ -59,5 +59,11 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Starts ASL Sink or Sign intent.
+     */
+    public void sinkOrSignClick(View view) {
+        Intent intent = new Intent(this, SinkOrSignActivity.class);
+        startActivity(intent);
+    }
 }

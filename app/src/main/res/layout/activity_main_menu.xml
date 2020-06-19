@@ -61,4 +61,13 @@
         android:drawableLeft="@drawable/bee"
         android:contentDescription="@string/bee"/>
 
+    <Button
+        android:id="@+id/sinkorsign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sinkOrSignClick"
+        android:text="@string/sink_or_sign"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
 </LinearLayout>

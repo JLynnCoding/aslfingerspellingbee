@@ -20,7 +20,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7;
     //Instance of Words to get spelling words and helper variables.
-    private SpellingBeeWords words;
+    private SpellingWords words;
     private String spellingWord;
     private String correctWord;
     //Buttons and other changing layout elements.
@@ -52,7 +52,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         letterGraphic6 = (ImageView) findViewById(R.id.letterGraphic6);
         letterGraphic7 = (ImageView) findViewById(R.id.letterGraphic7);
 
-        words = new SpellingBeeWords(this);
+        words = new SpellingWords(this);
 
         getWord();
 
@@ -60,7 +60,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     }
 
     /**
-     * Gets a random word from the SpellingBeeWords helper class.  Stores a copy as-is and
+     * Gets a random word from the SpellingWords helper class.  Stores a copy as-is and
      * in all lowercase letters for easier access to graphics.
      */
     public void getWord() {

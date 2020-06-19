@@ -2,6 +2,7 @@
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 2
  * Class that creates and manages ArrayList of Beginner Fingerspelling Bee Words and provides data
  * needed for app features. Reads list of words from files.
+ * Project Iteration 5: Updated to work for Sink or Sign activity as well.
  */
 package edu.bu.metcs.activitylifecycle;
 
@@ -15,24 +16,39 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class SpellingBeeWords {
+public class SpellingWords {
 
     private String TAG = "logInfo";
 
-    ArrayList<String> beginnerSpellingBeeWords;
-    private Context context; //TRYING
+    ArrayList<String> spellingList;
+    private Context context;
+    private String type;
+    InputStream is;
 
     /**
-     * Loads SpellingBeeWords into ArrayList for easy reference and randomizing order for
-     * use in Beginner Fingerspelling Bee.
+     * Loads SpellingWords into ArrayList for easy reference and randomizing order for
+     * use in various app features.
      */
-    public SpellingBeeWords(Context context) {
-        beginnerSpellingBeeWords = new ArrayList<>();
+    public SpellingWords(Context context) {
+        spellingList = new ArrayList<>();
+        this.context = context;
+
+        this.type = "";
+
+        ReadFromFileUsingScanner();
+
+        Log.i(TAG, "SpellingWords loaded");
+    }
+
+    public SpellingWords(Context context, String type){
+        spellingList = new ArrayList<>();
         this.context = context;
 
         ReadFromFileUsingScanner();
 
-        Log.i(TAG, "Spellingbee loaded");
+        this.type = type;
+
+        Log.i(TAG, "Word helper loaded");
     }
 
     /**
@@ -43,18 +59,23 @@ public class SpellingBeeWords {
 
         AssetManager am = context.getAssets();
         try {
-            InputStream is = am.open("beginnerspellingbeepropernouns.txt");
-            Log.i(TAG, "File opened.");
+            if (type.equals("sinkOrSign")){
+                is = am.open("advancedspellingwords.txt");
+                Log.i(TAG, "File opened.");
+            } else {
+                is = am.open("beginnerspellingbeepropernouns.txt");
+                Log.i(TAG, "File opened.");
+            }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line;
 
             while ((line = reader.readLine()) != null) {
-                beginnerSpellingBeeWords.add(line);
+                spellingList.add(line);
             }
 
-            Log.i(TAG, "There are " + beginnerSpellingBeeWords.size() + "words in the " +
-                    "spelling bee");
+            Log.i(TAG, "There are " + spellingList.size() + "words in the " +
+                    "spelling list");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -66,7 +87,7 @@ public class SpellingBeeWords {
      */
     public String getRandomWord() {
         Random randomNumber = new Random();
-        return beginnerSpellingBeeWords.get(randomNumber.nextInt(beginnerSpellingBeeWords.size()));
+        return spellingList.get(randomNumber.nextInt(spellingList.size()));
     }
 
 }

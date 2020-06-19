@@ -76,6 +76,16 @@
         android:paddingEnd="50dp"
         android:text="@string/asl_intermediate_spellingbee" />
 
-
+    <Button
+        android:id="@+id/sinkorsign"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/bee"
+        android:drawableLeft="@drawable/bee"
+        android:onClick="sinkOrSignClick"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/sink_or_sign" />
 
 </LinearLayout>
