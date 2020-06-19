@@ -121,6 +121,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
                     replacedLetters++;
                 }
                 letterGraphic1.setVisibility(View.VISIBLE);
+                Log.i(TAG, "Set Visibility Graphic 1");
             } else if (i == 1){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic2.setImageResource(getResources().getIdentifier(

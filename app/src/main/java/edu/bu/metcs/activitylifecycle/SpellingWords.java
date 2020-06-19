@@ -53,7 +53,7 @@ public class SpellingWords {
 
     /**
      * Opens file, reads it by line, and adds each line as a String into the ArrayList of
-     * Beginner Spelling Bee Words.
+     * Spelling Words.
      */
     private void ReadFromFileUsingScanner() {
 
