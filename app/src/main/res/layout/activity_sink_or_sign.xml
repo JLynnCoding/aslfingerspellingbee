@@ -41,130 +41,121 @@
 
     <ImageView
         android:id="@+id/letterGraphic1"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
-        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic2"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic1"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
-        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic3"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic2"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
-        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic4"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic3"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
-        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic5"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic4"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
-        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic6"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic5"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic7"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic6"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic8"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic7"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic9"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic8"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic10"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic9"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic11"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic10"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic12"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic11"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
 
     <ImageView
         android:id="@+id/letterGraphic13"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/letterGraphic12"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
@@ -174,7 +165,7 @@
         android:layout_height="wrap_content"
         tools:context=".SinkOrSignActivity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintTop_toBottomOf="@+id/letterGraphic6"
         app:layout_constraintStart_toStartOf="parent">
 
             <!--Table for American Manual Alphabet-->

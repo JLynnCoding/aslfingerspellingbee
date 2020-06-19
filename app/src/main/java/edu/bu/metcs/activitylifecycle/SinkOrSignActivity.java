@@ -18,8 +18,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
     private String correctWord;
     private String spellingWord;
 
-    int wrongGuesses = 0;
-    int replacedLetters = 0;
+    int wrongGuesses;
+    int replacedLetters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,9 @@ public class SinkOrSignActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sink_or_sign);
 
         spellingWords = new SpellingWords(this,"sinkOrSign");
+
+        wrongGuesses = 0;
+        replacedLetters = 0;
 
         getWord();
     }

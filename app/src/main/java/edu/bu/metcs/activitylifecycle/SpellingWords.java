@@ -33,7 +33,7 @@ public class SpellingWords {
         spellingList = new ArrayList<>();
         this.context = context;
 
-        this.type = "";
+        type = "";
 
         ReadFromFileUsingScanner();
 
@@ -44,9 +44,9 @@ public class SpellingWords {
         spellingList = new ArrayList<>();
         this.context = context;
 
-        ReadFromFileUsingScanner();
-
         this.type = type;
+
+        ReadFromFileUsingScanner();
 
         Log.i(TAG, "Word helper loaded");
     }
