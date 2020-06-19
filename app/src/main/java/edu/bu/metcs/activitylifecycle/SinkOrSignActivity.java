@@ -28,8 +28,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7, letterGraphic8, letterGraphic9,
-            letterGraphic10, letterGraphic11, letterGraphic12, letterGraphic13;
-    private ImageView sharkAttack;
+            letterGraphic10, letterGraphic11, letterGraphic12, letterGraphic13, sharkAttack;
     private TextView gameProgressText;
 
     private Button nextButton;
@@ -63,20 +62,6 @@ public class SinkOrSignActivity extends AppCompatActivity {
         letterGraphic11 = (ImageView) findViewById(R.id.letterGraphic11);
         letterGraphic12 = (ImageView) findViewById(R.id.letterGraphic12);
         letterGraphic13 = (ImageView) findViewById(R.id.letterGraphic13);
-
-        letterGraphic1.setVisibility(View.INVISIBLE);
-        letterGraphic2.setVisibility(View.INVISIBLE);
-        letterGraphic3.setVisibility(View.INVISIBLE);
-        letterGraphic4.setVisibility(View.INVISIBLE);
-        letterGraphic5.setVisibility(View.INVISIBLE);
-        letterGraphic6.setVisibility(View.INVISIBLE);
-        letterGraphic7.setVisibility(View.INVISIBLE);
-        letterGraphic8.setVisibility(View.INVISIBLE);
-        letterGraphic9.setVisibility(View.INVISIBLE);
-        letterGraphic10.setVisibility(View.INVISIBLE);
-        letterGraphic11.setVisibility(View.INVISIBLE);
-        letterGraphic12.setVisibility(View.INVISIBLE);
-        letterGraphic13.setVisibility(View.INVISIBLE);
 
         sharkAttack = (ImageView) findViewById(R.id.sharkattack);
         gameProgressText = (TextView) findViewById(R.id.gameProgressText);
@@ -114,6 +99,9 @@ public class SinkOrSignActivity extends AppCompatActivity {
      * Sets up images for word and updates as needed.
      */
     public void setUpWord() {
+
+        clearWord();
+
         for(int i = 0; i < spellingWord.length(); i++) {
             if (i == 0){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
@@ -382,8 +370,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
     public void letterFound() {
         if (replacedLetters == spellingWord.length()){
-            gameProgressText.setText("Great job! You guessed the word correctly and escaped the " +
-                    "shark!");
+            gameProgressText.setText("Great job! You escaped the shark by correctly guessing the " +
+                    "word " + correctWord);
             gameProgressText.setBackgroundColor(-16711936);
             gameProgressText.setTextColor(-16777216);
             gameProgressText.setVisibility(View.VISIBLE);
@@ -393,9 +381,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
     public void onClickNextWord(View view) {
         gameProgressText.setVisibility(View.INVISIBLE);
+        nextButton.setVisibility(View.INVISIBLE);
 
         for (View each : usedViews){
-            view.setEnabled(true);
+            each.setEnabled(true);
         }
 
         usedViews.clear();
@@ -410,6 +399,50 @@ public class SinkOrSignActivity extends AppCompatActivity {
         setUpWord();
 
         Log.i(TAG, "Sink or Sign has been set up.");
+
+    }
+
+    public void clearWord() {
+        letterGraphic1.setVisibility(View.INVISIBLE);
+        letterGraphic2.setVisibility(View.INVISIBLE);
+        letterGraphic3.setVisibility(View.INVISIBLE);
+        letterGraphic4.setVisibility(View.INVISIBLE);
+        letterGraphic5.setVisibility(View.INVISIBLE);
+        letterGraphic6.setVisibility(View.INVISIBLE);
+        letterGraphic7.setVisibility(View.INVISIBLE);
+        letterGraphic8.setVisibility(View.INVISIBLE);
+        letterGraphic9.setVisibility(View.INVISIBLE);
+        letterGraphic10.setVisibility(View.INVISIBLE);
+        letterGraphic11.setVisibility(View.INVISIBLE);
+        letterGraphic12.setVisibility(View.INVISIBLE);
+        letterGraphic13.setVisibility(View.INVISIBLE);
+
+        letterGraphic1.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic2.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic3.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic4.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic5.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic6.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic7.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic8.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic9.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic10.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic11.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic12.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
+        letterGraphic13.setImageResource(getResources().getIdentifier("@drawable/line",
+                null, getPackageName()));
 
     }
 }
