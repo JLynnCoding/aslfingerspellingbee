@@ -22,4 +22,6 @@
     <string name="handsign">Handsign: </string>
     <string name="guess_the_word">Guess the Word...</string>
     <string name="sink_or_sign">ASL Sink or Sign</string>
+    <string name="shark_is_coming">A shark is coming!</string>
+    <string name="shark_loss">Shark attack!</string>
 </resources>

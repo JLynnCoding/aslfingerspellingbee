@@ -34,6 +34,7 @@
         android:id="@+id/sharkattack"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:contentDescription="@string/shark_is_coming"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sinkorsignheading"
@@ -41,8 +42,9 @@
 
     <ImageView
         android:id="@+id/letterGraphic1"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
@@ -51,8 +53,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/letterGraphic1"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
@@ -61,8 +63,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/letterGraphic2"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
@@ -71,8 +73,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/letterGraphic3"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
@@ -81,8 +83,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic4"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.0"
@@ -90,8 +92,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic6"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic5"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -99,8 +101,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic7"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic6"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -108,8 +110,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic8"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic7"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -117,8 +119,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic9"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic8"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -126,8 +128,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic10"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic9"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -135,8 +137,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic11"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic10"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -144,8 +146,8 @@
 
     <ImageView
         android:id="@+id/letterGraphic12"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic11"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
@@ -153,12 +155,25 @@
 
     <ImageView
         android:id="@+id/letterGraphic13"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintStart_toEndOf="@id/letterGraphic12"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/line"/>
+
+
+    <TextView
+        android:id="@+id/gameProgressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letterGraphic6" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -181,28 +196,38 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/a" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/a"
+                        android:contentDescription="a"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/b" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/b"
+                        android:contentDescription="b"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/c" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/c"
+                        android:contentDescription="c"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/d" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/d"
+                        android:contentDescription="d"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/e" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/e"
+                        android:contentDescription="e"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
@@ -212,28 +237,38 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/f" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/f"
+                        android:contentDescription="f"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/g" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/g"
+                        android:contentDescription="g"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/h" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/h"
+                        android:contentDescription="h"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/i" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/i"
+                        android:contentDescription="i"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/j" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/j"
+                        android:contentDescription="j"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
@@ -243,28 +278,38 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/k" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/k"
+                        android:contentDescription="k"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/l" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/l"
+                        android:contentDescription="l"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/m" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/m"
+                        android:contentDescription="m"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/n" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/n"
+                        android:contentDescription="n"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/o" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/o"
+                        android:contentDescription="o"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
@@ -274,28 +319,38 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/p" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/p"
+                        android:contentDescription="p"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/q" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/q"
+                        android:contentDescription="q"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/r" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/r"
+                        android:contentDescription="r"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/s" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/s"
+                        android:contentDescription="s"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/t" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/t"
+                        android:contentDescription="t"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
@@ -305,28 +360,38 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/u" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/u"
+                        android:contentDescription="u"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/v" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/v"
+                        android:contentDescription="v"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/w" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/w"
+                        android:contentDescription="w"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/x" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/x"
+                        android:contentDescription="x"
+                        android:onClick="onClickSign"/>
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/y" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/y"
+                        android:contentDescription="y"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
@@ -336,13 +401,26 @@
 
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="73dp"
-                        android:src="@drawable/z" />
+                        android:layout_height="50dp"
+                        android:src="@drawable/z"
+                        android:contentDescription="z"
+                        android:onClick="onClickSign"/>
 
                 </TableRow>
 
             </TableLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/nextWordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickNextWord"
+        android:text="@string/next_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

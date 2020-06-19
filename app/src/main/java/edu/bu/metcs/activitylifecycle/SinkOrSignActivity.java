@@ -10,7 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class SinkOrSignActivity extends AppCompatActivity {
 
@@ -23,9 +29,18 @@ public class SinkOrSignActivity extends AppCompatActivity {
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7, letterGraphic8, letterGraphic9,
             letterGraphic10, letterGraphic11, letterGraphic12, letterGraphic13;
+    private ImageView sharkAttack;
+    private TextView gameProgressText;
+
+    private Button nextButton;
 
     int wrongGuesses;
     int replacedLetters;
+    boolean foundLetter;
+
+    private ArrayList<View> usedViews;
+
+    //private Alphabet alphabet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +49,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
         spellingWords = new SpellingWords(this,"sinkOrSign");
 
+        // Set up letter graphics to display blank word.
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
         letterGraphic2 = (ImageView) findViewById(R.id.letterGraphic2);
         letterGraphic3 = (ImageView) findViewById(R.id.letterGraphic3);
@@ -62,11 +78,26 @@ public class SinkOrSignActivity extends AppCompatActivity {
         letterGraphic12.setVisibility(View.INVISIBLE);
         letterGraphic13.setVisibility(View.INVISIBLE);
 
+        sharkAttack = (ImageView) findViewById(R.id.sharkattack);
+        gameProgressText = (TextView) findViewById(R.id.gameProgressText);
+        gameProgressText.setVisibility(View.INVISIBLE);
+
+        nextButton = (Button) findViewById(R.id.nextButton);
+        nextButton.setVisibility(View.INVISIBLE);
+
+        // Initialize variables for counts
         wrongGuesses = 0;
         replacedLetters = 0;
+        foundLetter = false;
 
+        usedViews = new ArrayList<>();
+        //alphabet = new Alphabet();
+
+        // Set up new word for activity.
         getWord();
         setUpWord();
+
+        Log.i(TAG, "Sink or Sign has been set up.");
     }
 
     /**
@@ -88,82 +119,298 @@ public class SinkOrSignActivity extends AppCompatActivity {
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic1.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic1.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic1.setVisibility(View.VISIBLE);
             } else if (i == 1){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic2.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic2.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic2.setVisibility(View.VISIBLE);
             } else if (i == 2){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic3.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic3.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic3.setVisibility(View.VISIBLE);
             } else if (i == 3){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic4.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic4.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic4.setVisibility(View.VISIBLE);
             } else if (i == 4){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic5.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic5.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic5.setVisibility(View.VISIBLE);
             } else if (i == 5){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic6.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic6.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic6.setVisibility(View.VISIBLE);
             } else if (i == 6){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic7.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic7.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic7.setVisibility(View.VISIBLE);
             } else if (i == 7){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic8.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic8.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic8.setVisibility(View.VISIBLE);
             } else if (i == 8){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic9.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic9.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic9.setVisibility(View.VISIBLE);
             } else if (i == 9){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic10.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic10.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic10.setVisibility(View.VISIBLE);
             } else if (i == 10){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic11.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic11.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic11.setVisibility(View.VISIBLE);
             } else if (i == 11){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic12.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic12.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic12.setVisibility(View.VISIBLE);
             } else if (i == 12){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
                     letterGraphic13.setImageResource(getResources().getIdentifier(
                             "@drawable/space", null, getPackageName()));
+                    letterGraphic13.setContentDescription("space");
+                    replacedLetters++;
                 }
                 letterGraphic13.setVisibility(View.VISIBLE);
             }
         }
+        Log.i(TAG, "Word was set up.");
+        Log.i(TAG, replacedLetters + " letters were replaced.");
+        Log.i(TAG, wrongGuesses + " wrong guesses.");
+        wrongGuesses = 0;
+        Log.i(TAG, wrongGuesses + " wrong guesses after reset.");
     }
 
+    public void onClickSign(View view) {
+        CharSequence letter = view.getContentDescription();
+        Log.i(TAG, "The guessed letter is " + letter);
+        Log.i(TAG, replacedLetters + " letters were replaced.");
+        Log.i(TAG, wrongGuesses + " wrong guesses.");
+        foundLetter = false;
+        view.setEnabled(false);
+        usedViews.add(view);
+        checkWord(letter);
+
+    }
+
+    public void checkWord(CharSequence letter) {
+        for (int i = 0; i < spellingWord.length(); i++) {
+            if (i == 0) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic1.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic1.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 1) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic2.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic2.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 2) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic3.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic3.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 3) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic4.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic4.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 4) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic5.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic5.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 5) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic6.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic6.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 6) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic7.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic7.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 7) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic8.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic8.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 8) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic9.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic9.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 9) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic10.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic10.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 10) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic11.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic11.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 11) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic12.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic12.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            } else if (i == 12) {
+                if (("" + spellingWord.charAt(i)).equals(letter)) {
+                    letterGraphic13.setImageResource(getResources().getIdentifier(
+                            "@drawable/" + letter, null, getPackageName()));
+                    letterGraphic13.setContentDescription(letter);
+                    replacedLetters++;
+                    foundLetter = true;
+                }
+            }
+            Log.i(TAG, replacedLetters + " letters have been replaced after checking.");
+            Log.i(TAG, wrongGuesses + " incorrect guesses have been made after checking.");
+            Log.i(TAG, "The letter was found " + foundLetter);
+        }
+        checkProgress();
+    }
+
+    public void checkProgress(){
+        if(foundLetter == false) {
+            wrongGuesses++;
+            Log.i(TAG, wrongGuesses + " incorrect guesses have been made (checkProgress).");
+            letterNotFound();
+        } else {
+            letterFound();
+            Log.i(TAG, replacedLetters + " letters have been replaced. (checkProgress)");
+        }
+    }
+
+    public void letterNotFound() {
+        sharkAttack.setImageResource(getResources().getIdentifier("@drawable/shark" +
+                (wrongGuesses + 1), null, getPackageName()));
+        Log.i(TAG, wrongGuesses + " incorrect guesses have been made (letterNotFound).");
+
+        if (wrongGuesses == 7){
+            sharkAttack.setContentDescription("Shark attack!");
+            gameProgressText.setText("SHARK ATTACK! \nThe correct answer was " + correctWord + ".");
+            gameProgressText.setBackgroundColor(-65536);
+            gameProgressText.setTextColor(-1);
+            gameProgressText.setVisibility(View.VISIBLE);
+            nextButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void letterFound() {
+        if (replacedLetters == spellingWord.length()){
+            gameProgressText.setText("Great job! You guessed the word correctly and escaped the " +
+                    "shark!");
+            gameProgressText.setBackgroundColor(-16711936);
+            gameProgressText.setTextColor(-16777216);
+            gameProgressText.setVisibility(View.VISIBLE);
+            nextButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void onClickNextWord(View view) {
+        gameProgressText.setVisibility(View.INVISIBLE);
+
+        for (View each : usedViews){
+            view.setEnabled(true);
+        }
+
+        usedViews.clear();
+
+        // Initialize variables for counts
+        wrongGuesses = 0;
+        replacedLetters = 0;
+        foundLetter = false;
+
+        // Set up new word for activity.
+        getWord();
+        setUpWord();
+
+        Log.i(TAG, "Sink or Sign has been set up.");
+
+    }
 }
+
