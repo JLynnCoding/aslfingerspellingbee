@@ -22,25 +22,30 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
     private String TAG = "Track";
 
+    // Variables for Word sourcing.
     private SpellingWords spellingWords;
     private String correctWord;
     private String spellingWord;
 
+    // Variables to be linked to Views.
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7, letterGraphic8, letterGraphic9,
             letterGraphic10, letterGraphic11, letterGraphic12, letterGraphic13, sharkAttack;
     private TextView gameProgressText;
-
     private Button nextButton;
 
+    // Variables to track game progress.
     int wrongGuesses;
     int replacedLetters;
     boolean foundLetter;
 
-    private ArrayList<View> usedViews;
+    // Variable to track disabled Views.
+    private ArrayList<View> disabledViews;
 
-    //private Alphabet alphabet;
-
+    /**
+     * Initialized variables needed for the ASL Sink or Sign feature and calls the methods needed
+     * to start the activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +53,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
         spellingWords = new SpellingWords(this,"sinkOrSign");
 
-        // Set up letter graphics to display blank word.
+        // Link letter graphic and shark graphic ImageViews to variables.
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
         letterGraphic2 = (ImageView) findViewById(R.id.letterGraphic2);
         letterGraphic3 = (ImageView) findViewById(R.id.letterGraphic3);
@@ -62,23 +67,23 @@ public class SinkOrSignActivity extends AppCompatActivity {
         letterGraphic11 = (ImageView) findViewById(R.id.letterGraphic11);
         letterGraphic12 = (ImageView) findViewById(R.id.letterGraphic12);
         letterGraphic13 = (ImageView) findViewById(R.id.letterGraphic13);
-
         sharkAttack = (ImageView) findViewById(R.id.sharkattack);
+
+        // Link Views to variables that control game progress.
         gameProgressText = (TextView) findViewById(R.id.gameProgressText);
         gameProgressText.setVisibility(View.INVISIBLE);
-
         nextButton = (Button) findViewById(R.id.nextButton);
         nextButton.setVisibility(View.INVISIBLE);
 
-        // Initialize variables for counts
+        // Initialize variables to track game progress.
         wrongGuesses = 0;
         replacedLetters = 0;
         foundLetter = false;
 
-        usedViews = new ArrayList<>();
-        //alphabet = new Alphabet();
+        // Initialize ArrayList to track disabled views.
+        disabledViews = new ArrayList<>();
 
-        // Set up new word for activity.
+        // Get and set up new word for activity.
         getWord();
         setUpWord();
 
@@ -96,12 +101,17 @@ public class SinkOrSignActivity extends AppCompatActivity {
     }
 
     /**
-     * Sets up images for word and updates as needed.
+     * Sets up images for word and updates as needed. A space graphic is used to denote spaces in
+     * the selected word and letters are shown as underscores. Any unused letter graphics remain
+     * hidden to the user.
      */
     public void setUpWord() {
 
+        // Resets all graphics to blank lines/underscores and makes them invisible.
         clearWord();
 
+        // Checks the chosen word for spaces and dynamically assigns the space image and
+        // description. Tracks how many letters are replaced.
         for(int i = 0; i < spellingWord.length(); i++) {
             if (i == 0){
                 if(("" + spellingWord.charAt(i)).equals(" ")) {
@@ -212,23 +222,38 @@ public class SinkOrSignActivity extends AppCompatActivity {
         Log.i(TAG, "Word was set up.");
         Log.i(TAG, replacedLetters + " letters were replaced.");
         Log.i(TAG, wrongGuesses + " wrong guesses.");
-        wrongGuesses = 0;
-        Log.i(TAG, wrongGuesses + " wrong guesses after reset.");
     }
 
+    /**
+     * A method that responds to touches individual letter hand signs and calls the appropriate
+     * methods to check if the letter is in the selected word.
+     */
     public void onClickSign(View view) {
+        // Get the letter from the ContentDescription
         CharSequence letter = view.getContentDescription();
         Log.i(TAG, "The guessed letter is " + letter);
         Log.i(TAG, replacedLetters + " letters were replaced.");
         Log.i(TAG, wrongGuesses + " wrong guesses.");
-        foundLetter = false;
-        view.setEnabled(false);
-        usedViews.add(view);
-        checkWord(letter);
 
+        // Resets variable to false.
+        foundLetter = false;
+
+        // Disables letter hand sign so the user cannot select it again and adds it to
+        // disabledViews to track it.
+        view.setEnabled(false);
+        disabledViews.add(view);
+
+        // Calls method to check letter against the word
+        checkWord(letter);
     }
 
+    /**
+     * Checks if the letter the user selected is in the word. If the letter is found, the
+     * corresponding handsign image appears in the corresponding spot in the word, the
+     * replacedLetters count is updated and the foundLetter boolean is set to true.
+     */
     public void checkWord(CharSequence letter) {
+        // Checks each letter in the word against the user's guessed letter.
         for (int i = 0; i < spellingWord.length(); i++) {
             if (i == 0) {
                 if (("" + spellingWord.charAt(i)).equals(letter)) {
@@ -335,13 +360,17 @@ public class SinkOrSignActivity extends AppCompatActivity {
                     foundLetter = true;
                 }
             }
-            Log.i(TAG, replacedLetters + " letters have been replaced after checking.");
-            Log.i(TAG, wrongGuesses + " incorrect guesses have been made after checking.");
-            Log.i(TAG, "The letter was found " + foundLetter);
         }
+        Log.i(TAG, replacedLetters + " letters have been replaced after checking.");
+        Log.i(TAG, wrongGuesses + " incorrect guesses have been made after checking.");
+
+        // Calls method to check the progress on the game.
         checkProgress();
     }
 
+    /**
+     * Checks if the letter was found and calls the appropriate method to process the results.
+     */
     public void checkProgress(){
         if(foundLetter == false) {
             wrongGuesses++;
@@ -353,11 +382,15 @@ public class SinkOrSignActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Updates the shark attack graphic if the user's guessed letter did not appear in the word.
+     * If the user has made 7 incorrect guesses, the user loses and is informed on the screen.
+     */
     public void letterNotFound() {
         sharkAttack.setImageResource(getResources().getIdentifier("@drawable/shark" +
                 (wrongGuesses + 1), null, getPackageName()));
-        Log.i(TAG, wrongGuesses + " incorrect guesses have been made (letterNotFound).");
 
+        // After 7 wrong guesses, the user loses.
         if (wrongGuesses == 7){
             sharkAttack.setContentDescription("Shark attack!");
             gameProgressText.setText("SHARK ATTACK! \nThe correct answer was " + correctWord + ".");
@@ -368,6 +401,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Checks if the user has completed the word and displays the results on the screen if they
+     * have.
+     */
     public void letterFound() {
         if (replacedLetters == spellingWord.length()){
             gameProgressText.setText("Great job! You escaped the shark by correctly guessing the " +
@@ -379,15 +416,20 @@ public class SinkOrSignActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Reacts to the user touching the "Next Word" button to advance the game to the next word.
+     * Resets appropriate views and calls methods to restart the activity.
+     */
     public void onClickNextWord(View view) {
+        // Set appropriate views to be hidden for next game.
         gameProgressText.setVisibility(View.INVISIBLE);
         nextButton.setVisibility(View.INVISIBLE);
 
-        for (View each : usedViews){
+        // Re0enable buttons and clear ArrayList to prepare for next round.
+        for (View each : disabledViews){
             each.setEnabled(true);
         }
-
-        usedViews.clear();
+        disabledViews.clear();
 
         // Initialize variables for counts
         wrongGuesses = 0;
@@ -399,9 +441,11 @@ public class SinkOrSignActivity extends AppCompatActivity {
         setUpWord();
 
         Log.i(TAG, "Sink or Sign has been set up.");
-
     }
 
+    /**
+     * Sets the letterGraphics to invisible and resets them with the blank line graphic.
+     */
     public void clearWord() {
         letterGraphic1.setVisibility(View.INVISIBLE);
         letterGraphic2.setVisibility(View.INVISIBLE);
@@ -443,7 +487,6 @@ public class SinkOrSignActivity extends AppCompatActivity {
                 null, getPackageName()));
         letterGraphic13.setImageResource(getResources().getIdentifier("@drawable/line",
                 null, getPackageName()));
-
     }
 }
 
