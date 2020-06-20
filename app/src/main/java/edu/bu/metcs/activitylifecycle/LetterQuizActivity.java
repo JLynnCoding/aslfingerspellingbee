@@ -20,9 +20,11 @@ public class LetterQuizActivity extends AppCompatActivity {
     private  Alphabet alphabet;  // Loads class that manages English alphabet
     private ImageView handSignGraphic; // Holds graphic for hand sign
     private EditText guessLetter;
-    private String englishLetter;
     private Button submitButton, nextButton; // Button objects for advancing
     private TextView checkGuessDisplay;
+    private String letter;
+    private String displayLetter;
+
 
     /**
      * Sets up variables for the layout and activity for the ASL Letter Quiz.
@@ -39,7 +41,7 @@ public class LetterQuizActivity extends AppCompatActivity {
         // Initializes parts of the layout.
         handSignGraphic = (ImageView) findViewById(R.id.handsignGraphic);
         guessLetter = (EditText) findViewById(R.id.guessLetter);
-        englishLetter = "";
+        displayLetter = "";
         submitButton = (Button) findViewById(R.id.submitButton);
         nextButton = (Button) findViewById(R.id.nextButton);
         submitButton.setVisibility(View.VISIBLE);
@@ -47,17 +49,41 @@ public class LetterQuizActivity extends AppCompatActivity {
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
 
+        if (savedInstanceState != null) {
+            letter = savedInstanceState.getString("letter", alphabet.getCurrentLetter());
+            displayLetter = savedInstanceState.getString("displayLetter",
+                    alphabet.getCurrentLetterDisplay());
+        } else {
+            getLetter();
+        }
+
         setUpQuiz();
+    }
+
+    /**
+     * Get a word.
+     */
+    public void getLetter() {
+        letter = alphabet.getCurrentLetter();
+        displayLetter = alphabet.getLetterDisplay(letter);
     }
 
     /**
      * Sets up the quiz layout with a new handsign.
      */
     public void setUpQuiz() {
+
         handSignGraphic.setImageResource(getResources().getIdentifier("@drawable/" +
-                alphabet.getCurrentLetter(), null, getPackageName()));
-        handSignGraphic.setContentDescription("" + alphabet.getCurrentLetter());
-        englishLetter = alphabet.getCurrentLetterDisplay();
+                letter, null, getPackageName()));
+        handSignGraphic.setContentDescription("" + letter);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putString("letter", alphabet.getCurrentLetter());
+        savedInstanceState.putString("displayLetter", alphabet.getCurrentLetterDisplay());
     }
 
     /**
@@ -66,12 +92,12 @@ public class LetterQuizActivity extends AppCompatActivity {
     public void onClickSubmit(View view) {
         String guess = guessLetter.getText().toString().toLowerCase();
 
-        if(guess.equals("" + englishLetter.charAt(1))) {
+        if(guess.equals("" + displayLetter.charAt(1))) {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
             checkGuessDisplay.setTextColor(-16777216);
         } else {
-            checkGuessDisplay.setText("Incorrect. The correct letter is " + englishLetter + ".");
+            checkGuessDisplay.setText("Incorrect. The correct letter is " + displayLetter + ".");
             checkGuessDisplay.setBackgroundColor(-65536);
             checkGuessDisplay.setTextColor(-1);
         }
