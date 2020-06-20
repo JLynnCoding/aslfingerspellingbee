@@ -54,9 +54,20 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
 
         words = new SpellingWords(this);
 
-        getWord();
+        if (savedInstanceState != null) {
+            correctWord = savedInstanceState.getString("word", words.getRandomWord());
+        } else {
+            getWord();
+        }
 
         setWord();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putString("word", correctWord);
     }
 
     /**
@@ -65,13 +76,13 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
      */
     public void getWord() {
         correctWord = words.getRandomWord();
-        spellingWord = correctWord.toLowerCase();
     }
 
     /**
      * Sets the fingerspelled word at the top of the Fingerspelling Bee Screen.
      */
     public void setWord() {
+        spellingWord = correctWord.toLowerCase();
 
         // Sets first 3 hand signs because all words are 3 or more letters.
         letterGraphic1.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(0), null, getPackageName()));
@@ -141,6 +152,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.VISIBLE);
         wordGuessText.setText("");
+
         getWord();
         setWord();
     }
