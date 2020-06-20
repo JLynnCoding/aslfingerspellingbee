@@ -8,7 +8,9 @@ package edu.bu.metcs.activitylifecycle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,6 +29,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     private EditText wordGuessText;
     private Button submitButton, nextWordButton;
     private TextView checkGuessDisplay;
+    private InputMethodManager imm;
 
     /**
      * Creates Fingerspelling Bee, sets up activity, and gets and sets a word.
@@ -43,7 +46,6 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
 
-
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
         letterGraphic2 = (ImageView) findViewById(R.id.letterGraphic2);
         letterGraphic3 = (ImageView) findViewById(R.id.letterGraphic3);
@@ -51,6 +53,23 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         letterGraphic5 = (ImageView) findViewById(R.id.letterGraphic5);
         letterGraphic6 = (ImageView) findViewById(R.id.letterGraphic6);
         letterGraphic7 = (ImageView) findViewById(R.id.letterGraphic7);
+
+        imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+
+
+        wordGuessText.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                    onClickSubmit(wordGuessText);
+
+                    return true;
+                }
+                return false;
+            }
+        });
 
         words = new SpellingWords(this);
 

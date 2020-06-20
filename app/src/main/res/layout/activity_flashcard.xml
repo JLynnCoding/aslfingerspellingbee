@@ -52,6 +52,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:onClick="onClickNextCard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/flashcard"

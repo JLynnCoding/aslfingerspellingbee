@@ -93,12 +93,21 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
      */
     public void onClickRevealAnswer(View view) {
         if(letterFirst) { //Letter First Selected
-            handSignGraphic.setVisibility(View.VISIBLE);
-            englishLetter.setVisibility(View.INVISIBLE);
+            if(view.getId() == handSignGraphic.getId()) {
+                onClickNextCard(view);
+            } else {
+                handSignGraphic.setVisibility(View.VISIBLE);
+                englishLetter.setVisibility(View.INVISIBLE);
+                reveal();
+            }
         } else { //Sign First (Default)
             handSignGraphic.setVisibility(View.INVISIBLE);
             englishLetter.setVisibility(View.VISIBLE);
+            reveal();
         }
+    }
+
+    public void reveal() {
         answerButton.setVisibility(View.INVISIBLE);
         nextCardButton.setVisibility(View.VISIBLE);
     }
@@ -108,12 +117,21 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
      */
     public void onClickNextCard(View view) {
         if(letterFirst){
-            handSignGraphic.setVisibility(View.INVISIBLE);
-            englishLetter.setVisibility(View.VISIBLE);
+            if(view.getId() == englishLetter.getId()){
+                onClickRevealAnswer(view);
+            } else {
+                handSignGraphic.setVisibility(View.INVISIBLE);
+                englishLetter.setVisibility(View.VISIBLE);
+                advance();
+            }
         } else {
             handSignGraphic.setVisibility(View.VISIBLE);
             englishLetter.setVisibility(View.INVISIBLE);
+            advance();
         }
+    }
+
+    public void advance(){
         answerButton.setVisibility(View.VISIBLE);
         nextCardButton.setVisibility(View.INVISIBLE);
         alphabet.getNextLetter();

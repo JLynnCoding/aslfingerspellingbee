@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -33,6 +35,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     private EditText wordGuessText;
     private Button submitButton, nextWordButton;
     private TextView checkGuessDisplay;
+
+    private InputMethodManager imm;
 
 
     /**
@@ -57,6 +61,23 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
 
         // Create new SpellingWords helper object as a source for words.
         words = new SpellingWords(this);
+
+        imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+
+
+        wordGuessText.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                    onClickSubmit(wordGuessText);
+
+                    return true;
+                }
+                return false;
+            }
+        });
 
         // Checks if the word was already selected and retrieve from savedInstanceState
         if (savedInstanceState != null) {

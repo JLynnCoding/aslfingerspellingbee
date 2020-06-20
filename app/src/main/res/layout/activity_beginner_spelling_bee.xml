@@ -110,6 +110,7 @@
         android:layout_marginBottom="312dp"
         android:ems="10"
         android:hint="@string/enter_guess"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

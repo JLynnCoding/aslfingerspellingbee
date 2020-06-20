@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,6 +26,7 @@ public class LetterQuizActivity extends AppCompatActivity {
     private TextView checkGuessDisplay;
     private String letter;
     private String displayLetter;
+    private InputMethodManager imm;
 
 
     /**
@@ -49,6 +52,21 @@ public class LetterQuizActivity extends AppCompatActivity {
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
 
+        imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+
+        guessLetter.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                    onClickSubmit(guessLetter);
+                    return true;
+                }
+                return false;
+            }
+        });
+
         if (savedInstanceState != null) {
             letter = savedInstanceState.getString("letter", alphabet.getCurrentLetter());
             displayLetter = savedInstanceState.getString("displayLetter",
@@ -72,7 +90,7 @@ public class LetterQuizActivity extends AppCompatActivity {
      * Sets up the quiz layout with a new handsign.
      */
     public void setUpQuiz() {
-
+        Log.i("Track", "Set up started");
         handSignGraphic.setImageResource(getResources().getIdentifier("@drawable/" +
                 letter, null, getPackageName()));
         handSignGraphic.setContentDescription("" + letter);
@@ -119,6 +137,8 @@ public class LetterQuizActivity extends AppCompatActivity {
         submitButton.setVisibility(View.VISIBLE);
         guessLetter.setText("");
         alphabet.getNextLetter();
+        Log.i("Track", alphabet.getCurrentLetter() + " is the letter");
+        getLetter();
         setUpQuiz();
     }
 }
