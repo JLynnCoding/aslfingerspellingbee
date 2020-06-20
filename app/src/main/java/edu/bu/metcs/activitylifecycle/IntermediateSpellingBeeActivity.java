@@ -58,12 +58,25 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         // Create new SpellingWords helper object as a source for words.
         words = new SpellingWords(this);
 
+
+        if (savedInstanceState != null) {
+            correctWord = savedInstanceState.getString("word", words.getRandomWord());
+        } else {
+            getWord();
+        }
+
         // Get a new word and set up appropriate flipper
-        getWord();
         setWord();
 
         // Stops flipper after all letters of the word shown.
         stopFlipper();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putString("word", correctWord);
     }
 
     /**
@@ -72,7 +85,6 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
      */
     public void getWord() {
         correctWord = words.getRandomWord();
-        spellingWord = correctWord.toLowerCase();
         Log.i(TAG, "Retrieved word: " + correctWord);
     }
 
@@ -80,6 +92,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
      * Sets the ViewFlipper up to scroll through handsign graphics for all letters of the word.
      */
     public void setWord() {
+        spellingWord = correctWord.toLowerCase();
+
         // Load letter handsign graphics into wordFlipper.
         for (int i = 0; i < spellingWord.length(); i++) {
             wordFlipper("@drawable/" + spellingWord.charAt(i),
