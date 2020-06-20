@@ -39,6 +39,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
     int replacedLetters;
     boolean foundLetter;
 
+    private ArrayList<String> guessedLetters;
+
     // Variable to track disabled Views.
     private ArrayList<View> disabledViews;
 
@@ -52,6 +54,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sink_or_sign);
 
         spellingWords = new SpellingWords(this,"sinkOrSign");
+
+        guessedLetters = new ArrayList<>();
 
         // Link letter graphic and shark graphic ImageViews to variables.
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
@@ -83,20 +87,35 @@ public class SinkOrSignActivity extends AppCompatActivity {
         // Initialize ArrayList to track disabled views.
         disabledViews = new ArrayList<>();
 
+        if (savedInstanceState != null) {
+            correctWord = savedInstanceState.getString("word", spellingWords.getRandomWord());
+            guessedLetters = savedInstanceState.getStringArrayList("guessList");
+        } else {
+            getWord();
+        }
         // Get and set up new word for activity.
-        getWord();
         setUpWord();
+
+        for (String each : guessedLetters) {
+            checkWord(each);
+        }
 
         Log.i(TAG, "Sink or Sign has been set up.");
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putString("word", correctWord);
+        savedInstanceState.putStringArrayList("guessList", guessedLetters);
+    }
+
     /**
-     * Gets a random word from the SpellingWords helper class. Stores a copy as-is and
-     * in all lowercase letters for easier access to graphics.
+     * Gets a random word from the SpellingWords helper class.
      */
     public void getWord() {
         correctWord = spellingWords.getRandomWord();
-        spellingWord = correctWord.toLowerCase();
         Log.i(TAG, "Retrieved word: " + correctWord);
     }
 
@@ -106,6 +125,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
      * hidden to the user.
      */
     public void setUpWord() {
+
+        spellingWord = correctWord.toLowerCase();
 
         // Resets all graphics to blank lines/underscores and makes them invisible.
         clearWord();
@@ -235,6 +256,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
         Log.i(TAG, "The guessed letter is " + letter);
         Log.i(TAG, replacedLetters + " letters were replaced.");
         Log.i(TAG, wrongGuesses + " wrong guesses.");
+
+        guessedLetters.add("" + letter);
 
         // Resets variable to false.
         foundLetter = false;
