@@ -103,6 +103,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
         Log.i(TAG, "Sink or Sign has been set up.");
     }
 
+    /**
+     * Saves retrieved word and current guesses to recreate activity if the orientation changes or
+     * the activity is otherwise destroyed mid-game.
+     */
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);

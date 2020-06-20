@@ -58,7 +58,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         // Create new SpellingWords helper object as a source for words.
         words = new SpellingWords(this);
 
-
+        // Checks if the word was already selected and retrieve from savedInstanceState
         if (savedInstanceState != null) {
             correctWord = savedInstanceState.getString("word", words.getRandomWord());
         } else {
@@ -72,6 +72,10 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         stopFlipper();
     }
 
+    /**
+     * Saves retrieved word to recreate activity if the orientation changes or the activity is
+     * otherwise destroyed mid-game.
+     */
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);

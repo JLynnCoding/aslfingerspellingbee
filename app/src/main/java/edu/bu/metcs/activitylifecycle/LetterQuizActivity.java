@@ -78,6 +78,10 @@ public class LetterQuizActivity extends AppCompatActivity {
         handSignGraphic.setContentDescription("" + letter);
     }
 
+    /**
+     * Saves retrieved word to recreate activity if the orientation changes or the activity is
+     * otherwise destroyed mid-game.
+     */
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
