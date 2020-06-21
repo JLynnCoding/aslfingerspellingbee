@@ -44,7 +44,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     private SeekBar speedSeekBar;
     private int flipSpeed = 1500; // Default speed
     private int slowestFlipSpeed = 500; // Minimum
-    private TextView secondSpeedDisplay;
+    private TextView secondSpeedDisplay, slower, faster;
 
 
     /**
@@ -64,6 +64,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         speedSeekBar = (SeekBar) findViewById(R.id.speedSeekBar);
         secondSpeedDisplay = (TextView) findViewById(R.id.numberOfSeconds);
+        slower = (TextView) findViewById(R.id.slowerText);
+        faster = (TextView) findViewById(R.id.fasterText);
 
         // Link flipper to layout
         handsign_Flipper = findViewById(R.id.handsign_flipper);
@@ -101,7 +103,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
 
                 //secondSpeedDisplay.setText("" + flipSpeed);
 
-                secondSpeedDisplay.setText(calculateSeconds() + " seconds per slide");
+                secondSpeedDisplay.setText(calculateSeconds() + " seconds per sign");
             }
 
             @Override
@@ -191,6 +193,9 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         String guess = wordGuessText.getText().toString().toLowerCase();
         wordGuessText.setEnabled(false);
         speedSeekBar.setVisibility(View.INVISIBLE);
+        slower.setVisibility(View.INVISIBLE);
+        faster.setVisibility(View.INVISIBLE);
+        secondSpeedDisplay.setVisibility(View.INVISIBLE);
 
         // Checks user response against correct answer.
         if(guess.equals(spellingWord)) {
@@ -220,6 +225,10 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         wordGuessText.setText("");
         wordGuessText.setEnabled(true);
         speedSeekBar.setVisibility(View.VISIBLE);
+        slower.setVisibility(View.VISIBLE);
+        faster.setVisibility(View.VISIBLE);
+        secondSpeedDisplay.setVisibility(View.VISIBLE);
+
 
 
         // Get a new word and set up appropriate flipper

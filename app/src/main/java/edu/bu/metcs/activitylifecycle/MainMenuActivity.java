@@ -15,17 +15,17 @@ import android.view.View;
 
 public class MainMenuActivity extends AppCompatActivity {
 
-    private int REQUEST_CODE = 101;
+    //private int REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main_menu);
 
-        Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this, REQUEST_CODE, intent, 0);
-        AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
-        am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), am.INTERVAL_DAY*2, pendingIntent);
+        //Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
+        //PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this, REQUEST_CODE, intent, 0);
+        //AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
+        //am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), am.INTERVAL_DAY*2, pendingIntent);
     }
 
     /**
@@ -74,5 +74,13 @@ public class MainMenuActivity extends AppCompatActivity {
     public void sinkOrSignClick(View view) {
         Intent intent = new Intent(this, SinkOrSignActivity.class);
         startActivity(intent);
+    }
+
+    /**
+     * Starts Statistics intent.
+     */
+    public void getStatsClick(View view) {
+       Intent intent = new Intent(this, ASLFingerspellingBeeStatisticsActivity.class);
+       startActivity(intent);
     }
 }

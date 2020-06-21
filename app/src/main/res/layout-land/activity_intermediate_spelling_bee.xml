@@ -99,4 +99,39 @@
         android:hint="@string/enter_guess"
         android:inputType="text" />
 
+    <SeekBar
+        android:id="@+id/speedSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@id/nextWordButton"
+        android:layout_marginBottom="-75dp"
+        android:max="2000"
+        android:progress="1000" />
+
+    <TextView
+        android:id="@+id/slowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="20dp"
+        android:text="@string/slower" />
+
+    <TextView
+        android:id="@+id/numberOfSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_centerHorizontal="true"
+        android:text="1.5 seconds per letter" />
+
+    <TextView
+        android:id="@+id/fasterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20dp"
+        android:text="@string/faster" />
+
 </RelativeLayout>

@@ -27,4 +27,6 @@
     <string name="speed">Speed</string>
     <string name="slower">Slower</string>
     <string name="faster">Faster</string>
+    <string name="asl_fingerspelling_bee_statistics">ASL Fingerspelling Bee Statistics</string>
+    <string name="asl_beginner_fingerspelling_bee_statistics">ASL Beginner Fingerspelling Bee Statistics</string>
 </resources>
