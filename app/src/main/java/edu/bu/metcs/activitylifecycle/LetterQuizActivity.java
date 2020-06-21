@@ -1,6 +1,10 @@
 /**
  *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 3
  *  Class for the ASL Letter Quiz Activity.
+ *  Update Project Iteration 5
+ *  Added Statistics for storage in SharedPreferences and SavedInstanceState to allow for seamless
+ *  recreation of the activity. Added onKeyListener to advance to onClickSubmit when user hits
+ *  "Enter" key. d
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -60,11 +64,12 @@ public class LetterQuizActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
 
+        // Initializes soft keyboard variable.
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
+        // Hides soft keyboard and advances to onClickSubmit after "Enter" key is used
         guessLetter.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
@@ -75,6 +80,8 @@ public class LetterQuizActivity extends AppCompatActivity {
             }
         });
 
+        // Gets new word if none is already stored from the app changing orientations or being
+        // otherwise destroyed and recreated.
         if (savedInstanceState != null) {
             letter = savedInstanceState.getString("letter", alphabet.getCurrentLetter());
             displayLetter = savedInstanceState.getString("displayLetter",
@@ -82,7 +89,6 @@ public class LetterQuizActivity extends AppCompatActivity {
         } else {
             getLetter();
         }
-
         setUpQuiz();
     }
 
@@ -111,13 +117,13 @@ public class LetterQuizActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-
         savedInstanceState.putString("letter", alphabet.getCurrentLetter());
         savedInstanceState.putString("displayLetter", alphabet.getCurrentLetterDisplay());
     }
 
     /**
-     * Check user's typed answer upon their click of the "Submit" button and displays results.
+     * Check user's typed answer upon their click of the "Submit" button, displays results, and
+     * records the results to SharedPreferences.
      */
     public void onClickSubmit(View view) {
         String guess = guessLetter.getText().toString().toLowerCase();

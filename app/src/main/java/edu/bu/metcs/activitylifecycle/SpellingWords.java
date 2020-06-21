@@ -2,7 +2,7 @@
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 2
  * Class that creates and manages ArrayList of Beginner Fingerspelling Bee Words and provides data
  * needed for app features. Reads list of words from files.
- * Project Iteration 5: Updated to work for Sink or Sign activity as well.
+ * Updated Project Iteration 5 to add Advanced Spelling List with second constructor.
  */
 package edu.bu.metcs.activitylifecycle;
 
@@ -32,7 +32,6 @@ public class SpellingWords {
     public SpellingWords(Context context) {
         spellingList = new ArrayList<>();
         this.context = context;
-
         type = "";
 
         ReadFromFileUsingScanner();
@@ -40,6 +39,10 @@ public class SpellingWords {
         Log.i(TAG, "SpellingWords loaded");
     }
 
+    /**
+     * Alternative constructor that accepts String to call lists other than the
+     * BeginnerSpellingWords List.
+     */
     public SpellingWords(Context context, String type){
         spellingList = new ArrayList<>();
         this.context = context;
@@ -89,5 +92,4 @@ public class SpellingWords {
         Random randomNumber = new Random();
         return spellingList.get(randomNumber.nextInt(spellingList.size()));
     }
-
 }

@@ -1,6 +1,9 @@
 /**
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 2
- * Activity for ASL Beginner Spelling Bee.
+ * Activity for ASL Beginner Spelling Bee, which displays a 3-7 letter word as hand signs from
+ * the American Manual Alphabet and asks the user to guess the word.
+ * Update Project Iteration 5: Added onKeyListener, savedInstanceState, and statistics to be
+ * stored in SharedPreferences.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -44,15 +47,15 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_beginner_spelling_bee);
+
+        // Sets up Views for reference
         wordGuessText = (EditText) findViewById(R.id.guessWord);
         submitButton = (Button) findViewById(R.id.submitButton);
         nextWordButton = (Button) findViewById(R.id.nextWordButton);
         nextWordButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
-
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
         letterGraphic2 = (ImageView) findViewById(R.id.letterGraphic2);
         letterGraphic3 = (ImageView) findViewById(R.id.letterGraphic3);
@@ -61,10 +64,14 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         letterGraphic6 = (ImageView) findViewById(R.id.letterGraphic6);
         letterGraphic7 = (ImageView) findViewById(R.id.letterGraphic7);
 
+        // Variable for soft keyboard
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-
+        // Variable for SharedPreferences for Statistics storage
         sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
 
+        /*
+         * onKeyListener() to detect if user pressed "Enter" and advances to onClickSubmit.
+         */
         wordGuessText.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 // If the event is a key-down event on the "enter" button
@@ -72,22 +79,21 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                     onClickSubmit(wordGuessText);
-
                     return true;
                 }
                 return false;
             }
         });
 
+        // Sets up Spelling Words and gets a new word or the previous retrieved word from
+        // SavedInstanceState, if the activity was interrupted.
         words = new SpellingWords(this);
-
         if (savedInstanceState != null) {
             correctWord = savedInstanceState.getString("word", words.getRandomWord());
         } else {
             getWord();
         }
-
-        setWord();
+        setWord(); // Sets up word display
     }
 
     /**
@@ -97,13 +103,11 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-
         savedInstanceState.putString("word", correctWord);
     }
 
     /**
-     * Gets a random word from the SpellingWords helper class.  Stores a copy as-is and
-     * in all lowercase letters for easier access to graphics.
+     * Gets a random word from the SpellingWords helper class.
      */
     public void getWord() {
         correctWord = words.getRandomWord();
@@ -156,8 +160,10 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
 
     /**
      * Check user's typed answer upon their click of the "Submit" button and displays results.
+     * Updates statistics in SharedPreferences.
      */
     public void onClickSubmit(View view) {
+        // Gets existing statistics from SharedPreferences and stores locally to update
         gamesWon = sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0);
         gamesLost = sharedPreferences.getInt("gamesLostBeginnerSpellingBee", 0);
         SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
@@ -180,7 +186,6 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         }
 
         sharedPrefEditor.apply();
-
         submitButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay.setVisibility(View.VISIBLE);
         nextWordButton.setVisibility(View.VISIBLE);
@@ -199,7 +204,4 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         getWord();
         setWord();
     }
-
-
-
 }

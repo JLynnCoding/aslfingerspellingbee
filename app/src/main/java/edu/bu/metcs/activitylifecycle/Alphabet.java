@@ -1,6 +1,7 @@
 /**
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
  * Class that creates and manages ArrayList for alphabet and provides data needed for app features.
+ * Updated in Iteration 5: Removed unused realphabetize method.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -77,12 +78,4 @@ public class Alphabet {
         Collections.shuffle(alphabet);
         currentPosition = 0;
     }
-
-    /**
-     * Returns the Alphabet list back to alphabetical order.
-     */
-    public void reAlphabetize() {
-        Collections.sort(alphabet);
-    }
-
 }

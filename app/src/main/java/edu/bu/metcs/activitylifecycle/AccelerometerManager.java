@@ -1,6 +1,8 @@
 /**
  *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 3
  *  Class that sets up the Observable for the accelerometer.
+ *  Project Iteration 5
+ *  Updated sensitivity settings to make the shake detection less sensitive.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -104,6 +106,9 @@ public class AccelerometerManager {
         AccelerometerManager.TIME_INTERVAL = interval;
     }
 
+    /**
+     * Creates listener for Accelerometer.
+     */
     private static SensorEventListener sensorEventListener = new SensorEventListener() {
 
         private long now = 0;
@@ -149,11 +154,7 @@ public class AccelerometerManager {
             listener.onAccelerationChanged(x,y,z);
         }
 
-
         @Override
-        public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-        }
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {}
     };
-
 }

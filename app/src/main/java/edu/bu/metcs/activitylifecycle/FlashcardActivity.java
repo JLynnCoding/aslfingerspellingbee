@@ -5,8 +5,11 @@
  * Project Iteration 2
  * Offers reverse functionality. User can toggle letterSwitch to see the English letter first, then
  * the ASL hand sign for that letter.
- * Project Iteration 2
+ * Project Iteration 3
  * Added shake to shuffle functionality.
+ * Project Iteration 5
+ * Added SavedInstanceState to make sure flashcards continue from where they left off when the
+ * orientation changes or the app is otherwise interrupted.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -49,12 +52,12 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
         nextCardButton.setVisibility(View.INVISIBLE);
         letterSwitch = (Switch) findViewById(R.id.letterSwitch);
 
+        // Switches between letter and hand sign first
         letterSwitch.setOnCheckedChangeListener((new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton cb, boolean on){
                 if(on)
                 {
-                    //Do something when Switch button is on/checked
                     letterFirst = true;
                     handSignGraphic.setVisibility(View.INVISIBLE);
                     englishLetter.setVisibility(View.VISIBLE);
@@ -63,7 +66,6 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
                 }
                 else
                 {
-                    //Do something when Switch is off/unchecked
                     letterFirst = false;
                     handSignGraphic.setVisibility(View.VISIBLE);
                     englishLetter.setVisibility(View.INVISIBLE);
@@ -89,7 +91,8 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
     }
 
     /**
-     * Advances to English letter that corresponds with shown hand sign.
+     * Advances to English letter that corresponds with shown hand sign, or vice versa, if letter
+     * first is set.
      */
     public void onClickRevealAnswer(View view) {
         if(letterFirst) { //Letter First Selected
@@ -107,6 +110,9 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
         }
     }
 
+    /**
+     * Changes visibility of the buttons after answer button is clicked.
+     */
     public void reveal() {
         answerButton.setVisibility(View.INVISIBLE);
         nextCardButton.setVisibility(View.VISIBLE);
@@ -131,6 +137,9 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
         }
     }
 
+    /**
+     * Displays appropriate button when advancing to next card.
+     */
     public void advance(){
         answerButton.setVisibility(View.VISIBLE);
         nextCardButton.setVisibility(View.INVISIBLE);
@@ -148,14 +157,11 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
         englishLetter.setText(alphabet.getCurrentLetterDisplay());
     }
 
-
     /**
      * Overrides onAccelerationChanged() method of AccelerometerListener Interface.
      */
     @Override
-    public void onAccelerationChanged(float x, float y, float z) {
-
-    }
+    public void onAccelerationChanged(float x, float y, float z) {}
 
     /**
      * Overrides onShake() method of AccelerometerListener Interface and responds to shake by
@@ -181,8 +187,7 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
     @Override
     public void onStop() {
         super.onStop();
-
-        // Checks if accelerometer was supported
+        // Checks if accelerometer is supported
         if (AccelerometerManager.isListening()) {
             // Stop listening
             AccelerometerManager.stopListening();
@@ -195,12 +200,10 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
     @Override
     public void onDestroy() {
         super.onDestroy();
-
         // Checks if accelerometer was supported
         if (AccelerometerManager.isListening()) {
             // Stop listening
             AccelerometerManager.stopListening();
         }
     }
-
 }

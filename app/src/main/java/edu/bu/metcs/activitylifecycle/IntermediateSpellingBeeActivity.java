@@ -1,6 +1,11 @@
 /**
  *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 4
  *  Class for the Intermediate Fingerspelling Bee Activity
+ *  Update Project Iteration 5
+ *  Added Statistics for storage in SharedPreferences and SavedInstanceState to allow for seamless
+ *  recreation of the activity. Added onKeyListener to advance to onClickSubmit when user hits
+ *  "Enter" key. Also added SeekBar to allow the user to dynamically adjust the
+ *  ViewFlipper speed to make the activity easier or more difficult.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -14,7 +19,6 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.inputmethod.EditorInfo;
 import android.widget.SeekBar;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -29,30 +33,23 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private int gamesWon;
     private int gamesLost;
-
     // ViewFlipper for slideshow of handsigns
     ViewFlipper handsign_Flipper;
-
     // Variables for word data
     private SpellingWords words;
     private String correctWord;
     private String spellingWord;
-
     private String TAG = "trackTag";
-
     // Buttons and other changing layout elements.
     private EditText wordGuessText;
     private Button submitButton, nextWordButton;
     private TextView checkGuessDisplay;
-
     private InputMethodManager imm;
-
     // Features for Speed Seeker
     private SeekBar speedSeekBar;
     private int flipSpeed = 1500; // Default speed
     private int slowestFlipSpeed = 500; // Minimum
     private TextView secondSpeedDisplay, slower, faster;
-
 
     /**
      * Initializes variables and sets up initial ViewFlipper.
@@ -81,9 +78,10 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         // Create new SpellingWords helper object as a source for words.
         words = new SpellingWords(this);
 
+        // Variable for soft keyboard
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
-        /**
+        /*
          * Detects enter being pressed on a hardware keyboard and calls the onClickSubmit() method
          * to proceed with submitting and checking the user's response.
          */
@@ -100,6 +98,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             }
         });
 
+        // Sets up listener for SeekBar
         speedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -114,8 +113,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) {}
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) { ;
@@ -123,6 +121,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             }
         });
 
+        // Initializes SharedPreferences
         sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
 
         // Checks if the word was already selected and retrieve from savedInstanceState
@@ -132,11 +131,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             getWord();
         }
 
-        // Get a new word and set up appropriate flipper
-        setWord();
-
-        // Stops flipper after all letters of the word shown.
-        stopFlipper();
+        setWord(); // Sets up new word
+        stopFlipper();  // Stops flipper after all letters of the word shown.
     }
 
     /**
@@ -146,7 +142,6 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-
         savedInstanceState.putString("word", correctWord);
     }
 
@@ -199,7 +194,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
      * Check user's typed answer upon their click of the "Submit" button and displays results.
      */
     public void onClickSubmit(View view) {
-
+        // Loads statistics variables from SharedPreferences
         gamesWon = sharedPreferences.getInt("gamesWonIntermediateSpellingBee", 0);
         gamesLost = sharedPreferences.getInt("gamesLostIntermediateSpellingBee", 0);
         SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
@@ -211,7 +206,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         faster.setVisibility(View.INVISIBLE);
         secondSpeedDisplay.setVisibility(View.INVISIBLE);
 
-        // Checks user response against correct answer.
+        // Checks user response against correct answer and updates statistics.
         if(guess.equals(spellingWord)) {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
@@ -226,8 +221,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             sharedPrefEditor.putInt("gamesLostIntermediateSpellingBee", gamesLost);
         }
 
-        sharedPrefEditor.apply();
-
+        sharedPrefEditor.apply(); // Saves updates in SharedPreferences.
 
         // Makes response check and next button visible.
         submitButton.setVisibility(View.INVISIBLE);
@@ -249,8 +243,6 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         slower.setVisibility(View.VISIBLE);
         faster.setVisibility(View.VISIBLE);
         secondSpeedDisplay.setVisibility(View.VISIBLE);
-
-
 
         // Get a new word and set up appropriate flipper
         getWord();
@@ -283,11 +275,13 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Calculates the speed of the flipper as set by the user via the SeekBar and dynamically
+     * updates the display.
+     */
     public String calculateSeconds() {
         double seconds = flipSpeed * 1.0 / 1000;
         String formattedSeconds = String.format("%.1f", seconds);
         return formattedSeconds;
     }
-
-
 }

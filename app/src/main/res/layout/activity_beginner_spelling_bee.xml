@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".BeginnerSpellingBeeActivity">
 
+    <!--ASL Beginner Spelling Bee logo view and heading-->
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoView" />
 
+    <!--ASL Beginner Spelling Bee word display-->
     <ImageView
         android:id="@+id/letterGraphic1"
         android:layout_width="52dp"
@@ -102,6 +104,7 @@
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/a" />
 
+    <!--ASL Beginner Spelling Bee layout EditText for user input-->
     <EditText
         android:id="@+id/guessWord"
         android:layout_width="wrap_content"
@@ -154,6 +157,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guessWord"
         app:layout_constraintVertical_bias="0.229" />
 
+    <!--ASL Beginner Spelling Bee Results Display-->
     <TextView
         android:id="@+id/checkAnswerText"
         android:layout_width="match_parent"
@@ -167,6 +171,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submitButton"
         app:layout_constraintVertical_bias="1.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
