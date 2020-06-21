@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,7 +65,10 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
 
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
-
+        /**
+         * Detects enter being pressed on a hardware keyboard and calls the onClickSubmit() method
+         * to proceed with submitting and checking the user's response.
+         */
         wordGuessText.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 // If the event is a key-down event on the "enter" button
@@ -72,7 +76,6 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                     onClickSubmit(wordGuessText);
-
                     return true;
                 }
                 return false;
