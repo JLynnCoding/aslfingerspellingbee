@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    tools:context=".MainMenuActivity">
+    tools:context=".ASLFingerspellingBeeStatisticsActivity">
 
     <ImageView
         android:id="@+id/logoView"
@@ -38,6 +38,7 @@
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
+            <!--Letter Quiz Statistics-->
             <TextView
                 android:id="@+id/letter_quiz_statistics_heading"
                 android:paddingTop="30dp"
@@ -86,6 +87,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"/>
 
+            <!--Beginner Fingerspelling Bee Statistics-->
             <TextView
                 android:id="@+id/beginnerspellingbee_heading"
                 android:paddingTop="20dp"
@@ -134,6 +136,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
+            <!--Intermediate Fingerspelling Bee Statistics-->
             <TextView
                 android:id="@+id/intermediatespellingbee_statistics_heading"
                 android:paddingTop="20dp"
@@ -182,6 +185,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
+            <!--Sink or Sign Statistics-->
             <TextView
                 android:id="@+id/sinkorsign_statistics_heading"
                 android:paddingTop="20dp"
@@ -229,6 +233,16 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
+
+            <!--Clear Button-->
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:onClick="onClickClearStats"
+                android:text="Clear All Statistics" />
         </LinearLayout>
 
     </ScrollView>

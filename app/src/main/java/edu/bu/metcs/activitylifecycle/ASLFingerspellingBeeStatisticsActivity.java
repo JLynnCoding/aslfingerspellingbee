@@ -1,3 +1,9 @@
+/**
+ * Jamie Lynn Lufrano - ASL Fingerspelling Bee Statistics - Project Iteration 5
+ * Activity for calculating, displaying, and clearing saved statistics from all of the app's
+ * activities, as saved in SharedPreferences.
+ */
+
 package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,10 +12,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
 
+    // Create variable for access to SharedPreferences
     private SharedPreferences sharedPreferences;
 
     // Letter Quiz Stats TextViews
@@ -28,11 +38,19 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
     private TextView gamesPlayedSinkOrSignDisplay, gamesWonSinkOrSignDisplay,
             gamesLostSinkOrSignDisplay, percentWonSinkOrSignDisplay;
 
+    // Clear Button
+    private Button clearButton;
+
+    /**
+     * Initializes all variables needed to manage and calculate statistics and calls for their
+     * display upon the creation of the Activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a_s_l_fingerspelling_bee_statistics);
 
+        // Initialize variable for SharedPreferences
         sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
 
         // Link Views for Letter Quiz Statistics
@@ -75,9 +93,17 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
         percentWonSinkOrSignDisplay = (TextView) findViewById
                 (R.id.sinkorsign_percent_correct);
 
+        // Link Button
+        clearButton = (Button) findViewById(R.id.clearButton);
+
+        // Call for Display of Statistics
         displayStatistics();
     }
 
+    /**
+     * Calculates and displays the statistics for all of the app's activities, as calculated from
+     * the data stored in SharedPreferences.
+     */
     public void displayStatistics() {
 
         // Calculate and Display Statistics for Letter Quiz
@@ -137,7 +163,27 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
                                         0))))) + "%");
     }
 
-    public void resetStatistics() {
-        //Clear all?
+    /**
+     * Clears all statistics stored in SharedPreferences to 0 and displays the cleared statistics.
+     */
+    public void onClickClearStats(View view) {
+        // Initalized editor to edit values
+        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
+
+        // Zeroes each statistic out
+        sharedPrefEditor.putInt("gamesWonLetterQuiz", 0);
+        sharedPrefEditor.putInt("gamesLostLetterQuiz", 0);
+        sharedPrefEditor.putInt("gamesWonBeginnerSpellingBee", 0);
+        sharedPrefEditor.putInt("gamesLostBeginnerSpellingBee", 0);
+        sharedPrefEditor.putInt("gamesWonIntermediateSpellingBee", 0);
+        sharedPrefEditor.putInt("gamesLostIntermediateSpellingBee", 0);
+        sharedPrefEditor.putInt("gamesWonSinkOrSign", 0);
+        sharedPrefEditor.putInt("gamesLostSinkOrSign", 0);
+
+        // Applies the edits
+        sharedPrefEditor.apply();
+
+        // Displays the cleared statistics
+        displayStatistics();
     }
 }
