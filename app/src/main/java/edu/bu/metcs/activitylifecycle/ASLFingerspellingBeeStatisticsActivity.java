@@ -161,6 +161,8 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
                         ((sharedPreferences.getInt("gamesWonSinkOrSign", 0) +
                                 sharedPreferences.getInt("gamesLostSinkOrSign",
                                         0))))) + "%");
+
+        Log.i("Track", "Statistics displayed.");
     }
 
     /**
@@ -182,6 +184,8 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
 
         // Applies the edits
         sharedPrefEditor.apply();
+
+        Log.i("Track", "Statistics cleared.");
 
         // Displays the cleared statistics
         displayStatistics();
