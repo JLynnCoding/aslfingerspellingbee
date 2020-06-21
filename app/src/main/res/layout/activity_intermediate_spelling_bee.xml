@@ -12,8 +12,8 @@
         android:id="@+id/logoView"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:contentDescription="@string/asl_fingerspelling_bee_logo"
         android:src="@drawable/asl_fingerspelling_bee_logo" />
 
@@ -22,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/logoView"
-        android:gravity="center"
         android:layout_marginBottom="-13dp"
+        android:gravity="center"
         android:text="@string/asl_intermediate_spellingbee"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/black"
@@ -59,8 +59,9 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="-47dp"
         android:ems="10"
-        android:maxLines="1"
-        android:hint="@string/enter_guess" />
+        android:hint="@string/enter_guess"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/submitButton"
@@ -93,5 +94,39 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <SeekBar
+        android:id="@+id/speedSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@id/nextWordButton"
+        android:layout_marginBottom="-75dp"
+        android:max="2000"
+        android:progress="1000" />
+
+    <TextView
+        android:id="@+id/slowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="20dp"
+        android:text="@string/slower" />
+
+    <TextView
+        android:id="@+id/numberOfSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_centerHorizontal="true"
+        android:text="1.5 seconds per letter" />
+
+    <TextView
+        android:id="@+id/fasterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speedSeekBar"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20dp"
+        android:text="@string/faster" />
 
 </RelativeLayout>

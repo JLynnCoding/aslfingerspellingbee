@@ -13,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.inputmethod.EditorInfo;
+import android.widget.SeekBar;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,12 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
 
     private InputMethodManager imm;
 
+    // Features for Speed Seeker
+    private SeekBar speedSeekBar;
+    private int flipSpeed = 1500; // Default speed
+    private int slowestFlipSpeed = 500; // Minimum
+    private TextView secondSpeedDisplay;
+
 
     /**
      * Initializes variables and sets up initial ViewFlipper.
@@ -55,6 +62,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         nextWordButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
+        speedSeekBar = (SeekBar) findViewById(R.id.speedSeekBar);
+        secondSpeedDisplay = (TextView) findViewById(R.id.numberOfSeconds);
 
         // Link flipper to layout
         handsign_Flipper = findViewById(R.id.handsign_flipper);
@@ -79,6 +88,29 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+
+        speedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                i = 2000 - i;
+                flipSpeed = i + slowestFlipSpeed;
+                handsign_Flipper.setFlipInterval(flipSpeed);
+
+                //secondSpeedDisplay.setText("" + flipSpeed);
+
+                secondSpeedDisplay.setText(calculateSeconds() + " seconds per slide");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) { ;
+                handsign_Flipper.setFlipInterval(flipSpeed);
             }
         });
 
@@ -143,7 +175,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
 
         // Flipper settings.
         handsign_Flipper.addView(letterView);
-        handsign_Flipper.setFlipInterval(1500);
+        handsign_Flipper.setFlipInterval(flipSpeed);
         handsign_Flipper.setAutoStart(true);
 
         // Set up animation for changing between handsign graphics.
@@ -158,6 +190,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
     public void onClickSubmit(View view) {
         String guess = wordGuessText.getText().toString().toLowerCase();
         wordGuessText.setEnabled(false);
+        speedSeekBar.setVisibility(View.INVISIBLE);
 
         // Checks user response against correct answer.
         if(guess.equals(spellingWord)) {
@@ -186,6 +219,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         submitButton.setVisibility(View.VISIBLE);
         wordGuessText.setText("");
         wordGuessText.setEnabled(true);
+        speedSeekBar.setVisibility(View.VISIBLE);
 
 
         // Get a new word and set up appropriate flipper
@@ -218,4 +252,12 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             }
         });
     }
+
+    public String calculateSeconds() {
+        double seconds = flipSpeed * 1.0 / 1000;
+        String formattedSeconds = String.format("%.1f", seconds);
+        return formattedSeconds;
+    }
+
+
 }

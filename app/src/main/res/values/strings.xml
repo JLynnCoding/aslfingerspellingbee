@@ -25,4 +25,6 @@
     <string name="shark_is_coming">A shark is coming!</string>
     <string name="shark_loss">Shark attack!</string>
     <string name="speed">Speed</string>
+    <string name="slower">Slower</string>
+    <string name="faster">Faster</string>
 </resources>
