@@ -7,6 +7,8 @@ package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -19,6 +21,11 @@ import android.widget.TextView;
 
 public class LetterQuizActivity extends AppCompatActivity {
 
+    // Variables for Game Stats
+    private SharedPreferences sharedPreferences;
+    private int gamesWon;
+    private int gamesLost;
+
     private  Alphabet alphabet;  // Loads class that manages English alphabet
     private ImageView handSignGraphic; // Holds graphic for hand sign
     private EditText guessLetter;
@@ -27,7 +34,6 @@ public class LetterQuizActivity extends AppCompatActivity {
     private String letter;
     private String displayLetter;
     private InputMethodManager imm;
-
 
     /**
      * Sets up variables for the layout and activity for the ASL Letter Quiz.
@@ -51,6 +57,8 @@ public class LetterQuizActivity extends AppCompatActivity {
         nextButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay = (TextView) findViewById(R.id.checkAnswerText);
         checkGuessDisplay.setVisibility(View.INVISIBLE);
+
+        sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
 
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
@@ -113,16 +121,27 @@ public class LetterQuizActivity extends AppCompatActivity {
      */
     public void onClickSubmit(View view) {
         String guess = guessLetter.getText().toString().toLowerCase();
+        gamesWon = sharedPreferences.getInt("gamesWonLetterQuiz", 0);
+        gamesLost = sharedPreferences.getInt("gamesLostLetterQuiz", 0);
+
+        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
 
         if(guess.equals("" + displayLetter.charAt(1))) {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
             checkGuessDisplay.setTextColor(-16777216);
+            gamesWon++;
+            sharedPrefEditor.putInt("gamesWonLetterQuiz", gamesWon);
         } else {
             checkGuessDisplay.setText("Incorrect. The correct letter is " + displayLetter + ".");
             checkGuessDisplay.setBackgroundColor(-65536);
             checkGuessDisplay.setTextColor(-1);
+            gamesLost++;
+            sharedPrefEditor.putInt("gamesLostLetter", gamesLost);
         }
+
+        sharedPrefEditor.apply();
+
         submitButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay.setVisibility(View.VISIBLE);
         nextButton.setVisibility(View.VISIBLE);
