@@ -7,6 +7,8 @@ package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +21,12 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class SinkOrSignActivity extends AppCompatActivity {
+
+    // Variables for Game Stats
+    private SharedPreferences sharedPreferences;
+    private int gamesWon;
+    private int gamesLost;
+    SharedPreferences.Editor sharedPrefEditor;
 
     private String TAG = "Track";
 
@@ -86,6 +94,9 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
         // Initialize ArrayList to track disabled views.
         disabledViews = new ArrayList<>();
+
+        sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
+        sharedPrefEditor = sharedPreferences.edit();
 
         if (savedInstanceState != null) {
             correctWord = savedInstanceState.getString("word", spellingWords.getRandomWord());
@@ -426,6 +437,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
             gameProgressText.setTextColor(-1);
             gameProgressText.setVisibility(View.VISIBLE);
             nextButton.setVisibility(View.VISIBLE);
+            gamesLost = sharedPreferences.getInt("gamesLostSinkOrSign", 0);
+            gamesLost++;
+            sharedPrefEditor.putInt("gamesLostSinkOrSign", gamesLost);
+            sharedPrefEditor.apply();
         }
     }
 
@@ -441,6 +456,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
             gameProgressText.setTextColor(-16777216);
             gameProgressText.setVisibility(View.VISIBLE);
             nextButton.setVisibility(View.VISIBLE);
+            gamesWon = sharedPreferences.getInt("gamesWonSinkOrSign", 0);
+            gamesWon++;
+            sharedPrefEditor.putInt("gamesWonSinkOrSign", gamesWon);
+            sharedPrefEditor.apply();
         }
     }
 

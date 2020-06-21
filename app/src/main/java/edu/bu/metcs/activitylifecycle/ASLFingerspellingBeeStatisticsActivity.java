@@ -25,6 +25,8 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
             gamesLostIntermediateSpellingBeeDisplay, percentWonIntermediateSpellingBeeDisplay;
 
     // Sink or Sign Stats Textviews
+    private TextView gamesPlayedSinkOrSignDisplay, gamesWonSinkOrSignDisplay,
+            gamesLostSinkOrSignDisplay, percentWonSinkOrSignDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +65,17 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
         percentWonIntermediateSpellingBeeDisplay = (TextView) findViewById
                 (R.id.intermediatespellingbee_percent_correct);
 
-        displayStatistics();
+        // Link Views for Sink or Sign Statistics
+        gamesPlayedSinkOrSignDisplay = (TextView) findViewById
+                (R.id.sinkorsign_games_played_display);
+        gamesWonSinkOrSignDisplay = (TextView) findViewById
+                (R.id.sinkorsign_games_won);
+        gamesLostSinkOrSignDisplay = (TextView) findViewById
+                (R.id.sinkorsign_games_lost);
+        percentWonSinkOrSignDisplay = (TextView) findViewById
+                (R.id.sinkorsign_percent_correct);
 
+        displayStatistics();
     }
 
     public void displayStatistics() {
@@ -111,6 +122,19 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
                                 sharedPreferences.getInt("gamesLostIntermediateSpellingBee",
                                         0))))) + "%");
 
+        // Calculate and Display Statistics for Sink or Sign
+        gamesPlayedSinkOrSignDisplay.setText("Games Played: " + ((sharedPreferences.
+                getInt("gamesWonSinkOrSign", 0) + sharedPreferences.
+                getInt("gamesLostSinkOrSign", 0))));
+        gamesWonSinkOrSignDisplay.setText("Games Won: " + (sharedPreferences.
+                getInt("gamesWonSinkOrSign", 0)));
+        gamesLostSinkOrSignDisplay.setText("Games Lost: " + (sharedPreferences.
+                getInt("gamesLostSinkOrSign", 0)));
+        percentWonSinkOrSignDisplay.setText("Accuracy: " + String.format ("%.2f",
+                ((sharedPreferences.getInt("gamesWonSinkOrSign", 0) * 100.00) /
+                        ((sharedPreferences.getInt("gamesWonSinkOrSign", 0) +
+                                sharedPreferences.getInt("gamesLostSinkOrSign",
+                                        0))))) + "%");
     }
 
     public void resetStatistics() {
