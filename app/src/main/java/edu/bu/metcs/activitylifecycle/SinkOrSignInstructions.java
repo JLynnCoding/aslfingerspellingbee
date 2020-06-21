@@ -7,7 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-public class SinkOrSwimInstructions extends DialogFragment {
+public class SinkOrSignInstructions extends DialogFragment {
 
     /**
      *

@@ -17,8 +17,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class SinkOrSignActivity extends AppCompatActivity {
@@ -538,7 +536,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
     }
 
     public void onClickInstructionsListener(View view) {
-        DialogFragment fragment = new SinkOrSwimInstructions();
+        DialogFragment fragment = new SinkOrSignInstructions();
         fragment.show(getSupportFragmentManager(), "instructions");
 
     }
