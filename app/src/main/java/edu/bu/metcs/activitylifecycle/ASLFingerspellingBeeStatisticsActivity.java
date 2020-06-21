@@ -12,7 +12,8 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
 
-    private TextView gamesPlayedBeginnerSpellingBeeDisplay;
+    private TextView gamesPlayedBeginnerSpellingBeeDisplay, gamesWonBeginnerSpellingBeeDisplay,
+            gamesLostBeginnerSpellingBeeDisplay, percentWonBeginnerSpellingBeeDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,12 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
 
         gamesPlayedBeginnerSpellingBeeDisplay = (TextView) findViewById
                 (R.id.beginnerspellingbee_games_played_display);
+        gamesWonBeginnerSpellingBeeDisplay = (TextView) findViewById
+                (R.id.beginnerspellingbee_games_won);
+        gamesLostBeginnerSpellingBeeDisplay = (TextView) findViewById
+                (R.id.beginnerspellingbee_games_lost);
+        percentWonBeginnerSpellingBeeDisplay = (TextView) findViewById
+                (R.id.beginnerspellingbee_percent_correct);
 
         displayStatistics();
 
@@ -32,6 +39,15 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
         gamesPlayedBeginnerSpellingBeeDisplay.setText("Games Played: " + ((sharedPreferences.
                 getInt("gamesWonBeginnerSpellingBee", 0) + sharedPreferences.
                 getInt("gamesLostBeginnerSpellingBee", 0))));
+        gamesWonBeginnerSpellingBeeDisplay.setText("Games Won: " + (sharedPreferences.
+                getInt("gamesWonBeginnerSpellingBee", 0)));
+        gamesLostBeginnerSpellingBeeDisplay.setText("Games Lost: " + (sharedPreferences.
+                getInt("gamesLostBeginnerSpellingBee", 0)));
+        percentWonBeginnerSpellingBeeDisplay.setText("Accuracy: " + String.format ("%.2f",
+                ((sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0) * 100.00) /
+                        ((sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0) +
+                                sharedPreferences.getInt("gamesLostBeginnerSpellingBee",
+                                        0))))) + "%");
 
     }
 }

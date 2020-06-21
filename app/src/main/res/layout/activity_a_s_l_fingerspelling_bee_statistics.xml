@@ -27,8 +27,8 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:paddingTop="50dp"
         android:id="@+id/beginnerspellingbee_heading"
+        android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
@@ -40,6 +40,33 @@
 
     <TextView
         android:id="@+id/beginnerspellingbee_games_played_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/beginnerspellingbee_games_won"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/beginnerspellingbee_games_lost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/beginnerspellingbee_percent_correct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
