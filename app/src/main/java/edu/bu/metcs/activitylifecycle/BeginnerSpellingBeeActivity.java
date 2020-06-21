@@ -160,11 +160,10 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
     public void onClickSubmit(View view) {
         gamesWon = sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0);
         gamesLost = sharedPreferences.getInt("gamesLostBeginnerSpellingBee", 0);
+        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
 
         String guess = wordGuessText.getText().toString().toLowerCase();
         wordGuessText.setEnabled(false);
-
-        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
 
         if(guess.equals(spellingWord)) {
             checkGuessDisplay.setText("Correct!");

@@ -21,6 +21,8 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
             gamesLostBeginnerSpellingBeeDisplay, percentWonBeginnerSpellingBeeDisplay;
 
     // Intermediate Spelling Bee Stats TextViews
+    private TextView gamesPlayedIntermediateSpellingBeeDisplay, gamesWonIntermediateSpellingBeeDisplay,
+            gamesLostIntermediateSpellingBeeDisplay, percentWonIntermediateSpellingBeeDisplay;
 
     // Sink or Sign Stats Textviews
 
@@ -50,6 +52,16 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
                 (R.id.beginnerspellingbee_games_lost);
         percentWonBeginnerSpellingBeeDisplay = (TextView) findViewById
                 (R.id.beginnerspellingbee_percent_correct);
+
+        // Link Views for Intermediate Spelling Bee Statistics
+        gamesPlayedIntermediateSpellingBeeDisplay = (TextView) findViewById
+                (R.id.intermediatespellingbee_games_played_display);
+        gamesWonIntermediateSpellingBeeDisplay = (TextView) findViewById
+                (R.id.intermediatespellingbee_games_won);
+        gamesLostIntermediateSpellingBeeDisplay = (TextView) findViewById
+                (R.id.intermediatespellingbee_games_lost);
+        percentWonIntermediateSpellingBeeDisplay = (TextView) findViewById
+                (R.id.intermediatespellingbee_percent_correct);
 
         displayStatistics();
 
@@ -83,6 +95,20 @@ public class ASLFingerspellingBeeStatisticsActivity extends AppCompatActivity {
                 ((sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0) * 100.00) /
                         ((sharedPreferences.getInt("gamesWonBeginnerSpellingBee", 0) +
                                 sharedPreferences.getInt("gamesLostBeginnerSpellingBee",
+                                        0))))) + "%");
+
+        // Calculate and Display Statistics for Intermediate Fingerspelling Bee
+        gamesPlayedIntermediateSpellingBeeDisplay.setText("Games Played: " + ((sharedPreferences.
+                getInt("gamesWonIntermediateSpellingBee", 0) + sharedPreferences.
+                getInt("gamesLostIntermediateSpellingBee", 0))));
+        gamesWonIntermediateSpellingBeeDisplay.setText("Games Won: " + (sharedPreferences.
+                getInt("gamesWonIntermediateSpellingBee", 0)));
+        gamesLostIntermediateSpellingBeeDisplay.setText("Games Lost: " + (sharedPreferences.
+                getInt("gamesLostIntermediateSpellingBee", 0)));
+        percentWonIntermediateSpellingBeeDisplay.setText("Accuracy: " + String.format ("%.2f",
+                ((sharedPreferences.getInt("gamesWonIntermediateSpellingBee", 0) * 100.00) /
+                        ((sharedPreferences.getInt("gamesWonIntermediateSpellingBee", 0) +
+                                sharedPreferences.getInt("gamesLostIntermediateSpellingBee",
                                         0))))) + "%");
 
     }

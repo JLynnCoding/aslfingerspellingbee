@@ -7,6 +7,8 @@ package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -22,6 +24,11 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 public class IntermediateSpellingBeeActivity extends AppCompatActivity {
+
+    // Variables for Game Stats
+    private SharedPreferences sharedPreferences;
+    private int gamesWon;
+    private int gamesLost;
 
     // ViewFlipper for slideshow of handsigns
     ViewFlipper handsign_Flipper;
@@ -116,6 +123,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             }
         });
 
+        sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
+
         // Checks if the word was already selected and retrieve from savedInstanceState
         if (savedInstanceState != null) {
             correctWord = savedInstanceState.getString("word", words.getRandomWord());
@@ -190,6 +199,11 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
      * Check user's typed answer upon their click of the "Submit" button and displays results.
      */
     public void onClickSubmit(View view) {
+
+        gamesWon = sharedPreferences.getInt("gamesWonIntermediateSpellingBee", 0);
+        gamesLost = sharedPreferences.getInt("gamesLostIntermediateSpellingBee", 0);
+        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
+
         String guess = wordGuessText.getText().toString().toLowerCase();
         wordGuessText.setEnabled(false);
         speedSeekBar.setVisibility(View.INVISIBLE);
@@ -202,11 +216,18 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
             checkGuessDisplay.setText("Correct!");
             checkGuessDisplay.setBackgroundColor(-16711936);
             checkGuessDisplay.setTextColor(-16777216);
+            gamesWon++;
+            sharedPrefEditor.putInt("gamesWonIntermediateSpellingBee", gamesWon);
         } else {
             checkGuessDisplay.setText("Incorrect. The correct answer is " + correctWord + ".");
             checkGuessDisplay.setBackgroundColor(-65536);
             checkGuessDisplay.setTextColor(-1);
+            gamesLost++;
+            sharedPrefEditor.putInt("gamesLostIntermediateSpellingBee", gamesLost);
         }
+
+        sharedPrefEditor.apply();
+
 
         // Makes response check and next button visible.
         submitButton.setVisibility(View.INVISIBLE);

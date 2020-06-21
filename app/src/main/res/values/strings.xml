@@ -30,4 +30,6 @@
     <string name="asl_fingerspelling_bee_statistics">ASL Fingerspelling Bee Statistics</string>
     <string name="asl_beginner_fingerspelling_bee_statistics">ASL Beginner Fingerspelling Bee Statistics</string>
     <string name="asl_letter_quiz_statistics">ASL Letter Quiz Statistics</string>
+    <string name="asl_intermediate_fingerspelling_bee_statistics">ASL Intermediate Fingerspelling Bee Statistics</string>
+    <string name="asl_sink_or_sign_statistics">ASL Sink or Sign Statistics</string>
 </resources>
