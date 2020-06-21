@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:contentDescription="@string/asl_fingerspelling_bee_logo"
-        android:src="@drawable/asl_fingerspelling_bee_logo" />
+        android:src="@drawable/asl_fingerspelling_bee_logo_landscape" />
 
     <TextView
         android:id="@+id/statistics_heading"
