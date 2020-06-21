@@ -6,6 +6,7 @@
 package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -534,6 +535,12 @@ public class SinkOrSignActivity extends AppCompatActivity {
                 null, getPackageName()));
         letterGraphic13.setImageResource(getResources().getIdentifier("@drawable/line",
                 null, getPackageName()));
+    }
+
+    public void onClickInstructionsListener(View view) {
+        DialogFragment fragment = new SinkOrSwimInstructions();
+        fragment.show(getSupportFragmentManager(), "instructions");
+
     }
 }
 
