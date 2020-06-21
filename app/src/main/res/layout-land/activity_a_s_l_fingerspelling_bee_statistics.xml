@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".ASLFingerspellingBeeStatisticsActivity">
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo" />
+
+    <TextView
+        android:id="@+id/statistics_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="ASL Fingerspelling Bee Statistics"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/statistics_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!--Letter Quiz Statistics-->
+            <TextView
+                android:id="@+id/letter_quiz_statistics_heading"
+                android:paddingTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/asl_letter_quiz_statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/letterquiz_games_played_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/letterquiz_games_won"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/letterquiz_games_lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/letterquiz_percent_correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <!--Beginner Fingerspelling Bee Statistics-->
+            <TextView
+                android:id="@+id/beginnerspellingbee_heading"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/asl_beginner_fingerspelling_bee_statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/beginnerspellingbee_games_played_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/beginnerspellingbee_games_won"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/beginnerspellingbee_games_lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/beginnerspellingbee_percent_correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--Intermediate Fingerspelling Bee Statistics-->
+            <TextView
+                android:id="@+id/intermediatespellingbee_statistics_heading"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/asl_intermediate_fingerspelling_bee_statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/intermediatespellingbee_games_played_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/intermediatespellingbee_games_won"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/intermediatespellingbee_games_lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/intermediatespellingbee_percent_correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--Sink or Sign Statistics-->
+            <TextView
+                android:id="@+id/sinkorsign_statistics_heading"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/asl_sink_or_sign_statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/sinkorsign_games_played_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/sinkorsign_games_won"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/sinkorsign_games_lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/sinkorsign_percent_correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--Clear Button-->
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:onClick="onClickClearStats"
+                android:text="Clear All Statistics" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

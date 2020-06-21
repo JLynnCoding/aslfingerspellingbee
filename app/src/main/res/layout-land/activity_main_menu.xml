@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Main Menu Layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="5dp"
+    tools:context=".MainMenuActivity">
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo_landscape" />
+
+    <ScrollView
+        android:id="@+id/buttonScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/alphabetChartButton"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableStart="@drawable/bee"
+                android:onClick="alphabetChartClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/asl_alphabet_chart" />
+
+            <Button
+                android:id="@+id/alphabetFlashCards"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableStart="@drawable/bee"
+                android:onClick="flashcardClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/asl_alphabet_flashcards" />
+
+            <Button
+                android:id="@+id/letterquiz"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableLeft="@drawable/bee"
+                android:onClick="letterQuizClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/asl_letter_quiz" />
+
+            <Button
+                android:id="@+id/beginnerspellingbee"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableLeft="@drawable/bee"
+                android:onClick="beginnerSpellingClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/asl_beginner_spellingbee" />
+
+            <Button
+                android:id="@+id/intermediatespellingbee"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableLeft="@drawable/bee"
+                android:onClick="intermediateSpellingClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/asl_intermediate_spellingbee" />
+
+            <Button
+                android:id="@+id/sinkorsign"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bee"
+                android:drawableLeft="@drawable/bee"
+                android:onClick="sinkOrSignClick"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/sink_or_sign" />
+
+            <Button
+                android:id="@+id/statistics_button"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center"
+                android:onClick="getStatsClick"
+                android:text="@string/asl_fingerspelling_bee_statistics"
+                android:drawableLeft="@drawable/bee"
+                android:drawableRight="@drawable/bee"
+                android:contentDescription="@string/bee"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

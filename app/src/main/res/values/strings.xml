@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ASL Fingerspelling Bee</string>
+    <string name="asl_fingerspelling_bee_logo">ASL Fingerspelling Bee Logo</string>
+    <string name="asl_alphabet_chart">ASL Alphabet Chart</string>
+    <string name="asl_alphabet_flashcards">ASL Alphabet Flashcards</string>
+    <string name="asl_beginner_spellingbee">ASL Beginner Fingerspelling Bee</string>
+    <string name="asl_intermediate_spellingbee">ASL Intermediate Fingerspelling Bee</string>
+    <string name="next_card">Next Card</string>
+    <string name="answer">ANSWER</string>
+    <string name="letter_first">Letter First</string>
+    <string name="enter_guess">Enter guess...</string>
+    <string name="enter_letter">Enter the English letter...</string>
+    <string name="type_word">Type the fingerspelled word:</string>
+    <string name="submit">Submit</string>
+    <string name="next_word">Next Word</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect.</string>
+    <string name="asl_letter_quiz">ASL Letter Quiz</string>
+    <string name="letter_quiz_instructions">Enter the English letter</string>
+    <string name="next">Next</string>
+    <string name="bee">Bee</string>
+    <string name="handsign">Handsign: </string>
+    <string name="guess_the_word">Guess the Word...</string>
+    <string name="sink_or_sign">ASL Sink or Sign</string>
+    <string name="shark_is_coming">A shark is coming!</string>
+    <string name="shark_loss">Shark attack!</string>
+    <string name="speed">Speed</string>
+    <string name="slower">Slower</string>
+    <string name="faster">Faster</string>
+    <string name="asl_fingerspelling_bee_statistics">ASL Fingerspelling Bee Statistics</string>
+    <string name="asl_beginner_fingerspelling_bee_statistics">ASL Beginner Fingerspelling Bee Statistics</string>
+    <string name="asl_letter_quiz_statistics">ASL Letter Quiz Statistics</string>
+    <string name="asl_intermediate_fingerspelling_bee_statistics">ASL Intermediate Fingerspelling Bee Statistics</string>
+    <string name="asl_sink_or_sign_statistics">ASL Sink or Sign Statistics</string>
+    <string name="channel_name">Reminder</string>
+    <string name="channel_description">reminders</string>
+</resources>
