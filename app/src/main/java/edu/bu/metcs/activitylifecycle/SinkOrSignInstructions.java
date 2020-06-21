@@ -1,3 +1,8 @@
+/**
+ * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 5
+ * Class that sets up DialogFragment for Instructions button for ASL Sink or Sign.
+ */
+
 package edu.bu.metcs.activitylifecycle;
 
 import android.app.Dialog;
@@ -10,7 +15,7 @@ import androidx.fragment.app.DialogFragment;
 public class SinkOrSignInstructions extends DialogFragment {
 
     /**
-     *
+     * Creates and sets up DialogFragment for Sink or Sign Instructions.
      */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -20,7 +25,6 @@ public class SinkOrSignInstructions extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 });
-
         return builder.create();
     }
 }

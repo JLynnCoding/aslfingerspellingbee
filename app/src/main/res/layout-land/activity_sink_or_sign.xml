@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".SinkOrSignActivity">
 
+    <!--Sink or Sign Logo and Heading-->
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoView" />
 
+    <!--Shark Attack Graphic-->
     <ImageView
         android:id="@+id/sharkattack"
         android:layout_width="match_parent"
@@ -42,6 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sinkorsignheading"
         app:srcCompat="@drawable/shark1" />
 
+    <!--Display for Word to be Solved-->
     <ImageView
         android:id="@+id/letterGraphic1"
         android:layout_width="32dp"
@@ -147,7 +150,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:srcCompat="@drawable/line" />
 
-
+    <!--Displays Results of Activity-->
     <TextView
         android:id="@+id/gameProgressText"
         android:layout_width="match_parent"
@@ -171,6 +174,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.229" />
 
+    <!--Hand Sign Keyboard-->
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -409,6 +413,7 @@
 
     </ScrollView>
 
+    <!--Sink or Sign Instructions Button-->
     <ImageView
         android:id="@+id/instructionButton"
         android:layout_width="wrap_content"

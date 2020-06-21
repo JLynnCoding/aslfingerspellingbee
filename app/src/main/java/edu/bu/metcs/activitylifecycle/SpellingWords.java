@@ -59,7 +59,7 @@ public class SpellingWords {
 
         AssetManager am = context.getAssets();
         try {
-            if (type.equals("sinkOrSign")){
+            if (type.equals("advanced")){
                 is = am.open("advancedspellingwords.txt");
                 Log.i(TAG, "File opened.");
             } else {

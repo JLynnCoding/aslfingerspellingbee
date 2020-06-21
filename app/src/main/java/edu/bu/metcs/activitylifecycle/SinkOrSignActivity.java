@@ -1,6 +1,9 @@
 /**
  * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 5
- * Class that manages the "ASL Sink or Sign" feature of the app.
+ * Class that manages the "ASL Sink or Sign" feature, which displays a random word from the
+ * advanced spelling list and displays it hidden to the user. As the user guesses letters,
+ * it fills in the letters and hand signs. The user must solve the word before guessing 7 wrong
+ * answers and getting caught by the shark.
  */
 
 package edu.bu.metcs.activitylifecycle;
@@ -22,11 +25,14 @@ import java.util.ArrayList;
 public class SinkOrSignActivity extends AppCompatActivity {
 
     // Variables for Game Stats
-    private SharedPreferences sharedPreferences;
     private int gamesWon;
     private int gamesLost;
-    SharedPreferences.Editor sharedPrefEditor;
 
+    // Variables for SharedPreferences
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor sharedPrefEditor;
+
+    // Tag to track Logs
     private String TAG = "Track";
 
     // Variables for Word sourcing.
@@ -34,7 +40,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
     private String correctWord;
     private String spellingWord;
 
-    // Variables to be linked to Views.
+    // Variables for Views.
     private ImageView letterGraphic1, letterGraphic2, letterGraphic3, letterGraphic4,
             letterGraphic5, letterGraphic6, letterGraphic7, letterGraphic8, letterGraphic9,
             letterGraphic10, letterGraphic11, letterGraphic12, letterGraphic13, sharkAttack;
@@ -45,7 +51,6 @@ public class SinkOrSignActivity extends AppCompatActivity {
     int wrongGuesses;
     int replacedLetters;
     boolean foundLetter;
-
     private ArrayList<String> guessedLetters;
 
     // Variable to track disabled Views.
@@ -60,11 +65,13 @@ public class SinkOrSignActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sink_or_sign);
 
-        spellingWords = new SpellingWords(this,"sinkOrSign");
+        // Initialized instance of SpellingWords to access advance spelling words
+        spellingWords = new SpellingWords(this,"advanced");
 
+        // Tracks letters guessed for savedInstanceState
         guessedLetters = new ArrayList<>();
 
-        // Link letter graphic and shark graphic ImageViews to variables.
+        // Link letter graphics and shark graphic ImageViews to variables.
         letterGraphic1 = (ImageView) findViewById(R.id.letterGraphic1);
         letterGraphic2 = (ImageView) findViewById(R.id.letterGraphic2);
         letterGraphic3 = (ImageView) findViewById(R.id.letterGraphic3);
@@ -94,22 +101,28 @@ public class SinkOrSignActivity extends AppCompatActivity {
         // Initialize ArrayList to track disabled views.
         disabledViews = new ArrayList<>();
 
+        // Variables for SharedPreferences to manage game statistics.
         sharedPreferences = getSharedPreferences("Stats", Context.MODE_PRIVATE);
         sharedPrefEditor = sharedPreferences.edit();
 
+        /*
+        Checks for savedInstanceState and loads word and guesses, if the game was previously
+        started.
+         */
         if (savedInstanceState != null) {
             correctWord = savedInstanceState.getString("word", spellingWords.getRandomWord());
             guessedLetters = savedInstanceState.getStringArrayList("guessList");
         } else {
-            getWord();
+            getWord();    // Get new word for activity if not already started/saved.
         }
-        // Get and set up new word for activity.
+
+        // Sets up display of word to be solved
         setUpWord();
 
+        // Iterates through any previously guesses letters from savedInstanceState
         for (String each : guessedLetters) {
             checkWord(each);
         }
-
         Log.i(TAG, "Sink or Sign has been set up.");
     }
 
@@ -140,7 +153,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
      */
     public void setUpWord() {
 
-        spellingWord = correctWord.toLowerCase();
+        spellingWord = correctWord.toLowerCase(); // Lowercase for easy calling of drawables
 
         // Resets all graphics to blank lines/underscores and makes them invisible.
         clearWord();
@@ -261,7 +274,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
     }
 
     /**
-     * A method that responds to touches individual letter hand signs and calls the appropriate
+     * A method that responds to touches to individual letter hand signs and calls the appropriate
      * methods to check if the letter is in the selected word.
      */
     public void onClickSign(View view) {
@@ -271,18 +284,16 @@ public class SinkOrSignActivity extends AppCompatActivity {
         Log.i(TAG, replacedLetters + " letters were replaced.");
         Log.i(TAG, wrongGuesses + " wrong guesses.");
 
-        guessedLetters.add("" + letter);
+        guessedLetters.add("" + letter); // Add guess to guessLetters
 
-        // Resets variable to false.
-        foundLetter = false;
+        foundLetter = false;   // Resets variable to false.
 
         // Disables letter hand sign so the user cannot select it again and adds it to
         // disabledViews to track it.
         view.setEnabled(false);
         disabledViews.add(view);
 
-        // Calls method to check letter against the word
-        checkWord(letter);
+        checkWord(letter);  // Calls method to check letter against the word to be solved
     }
 
     /**
@@ -291,7 +302,6 @@ public class SinkOrSignActivity extends AppCompatActivity {
      * replacedLetters count is updated and the foundLetter boolean is set to true.
      */
     public void checkWord(CharSequence letter) {
-        // Checks each letter in the word against the user's guessed letter.
         for (int i = 0; i < spellingWord.length(); i++) {
             if (i == 0) {
                 if (("" + spellingWord.charAt(i)).equals(letter)) {
@@ -402,8 +412,8 @@ public class SinkOrSignActivity extends AppCompatActivity {
         Log.i(TAG, replacedLetters + " letters have been replaced after checking.");
         Log.i(TAG, wrongGuesses + " incorrect guesses have been made after checking.");
 
-        // Calls method to check the progress on the game.
-        checkProgress();
+        checkProgress();  // Calls method to check the progress on the game.
+
     }
 
     /**
@@ -423,8 +433,10 @@ public class SinkOrSignActivity extends AppCompatActivity {
     /**
      * Updates the shark attack graphic if the user's guessed letter did not appear in the word.
      * If the user has made 7 incorrect guesses, the user loses and is informed on the screen.
+     * The loss is recorded to SharedPreferences.
      */
     public void letterNotFound() {
+        // Update shark image
         sharkAttack.setImageResource(getResources().getIdentifier("@drawable/shark" +
                 (wrongGuesses + 1), null, getPackageName()));
 
@@ -445,7 +457,7 @@ public class SinkOrSignActivity extends AppCompatActivity {
 
     /**
      * Checks if the user has completed the word and displays the results on the screen if they
-     * have.
+     * have. The win is recorded to SharedPreferences.
      */
     public void letterFound() {
         if (replacedLetters == spellingWord.length()){
@@ -471,13 +483,11 @@ public class SinkOrSignActivity extends AppCompatActivity {
         gameProgressText.setVisibility(View.INVISIBLE);
         nextButton.setVisibility(View.INVISIBLE);
 
-        // Re0enable buttons and clear ArrayList to prepare for next round.
+        // Re-enable buttons and clears variables to prepare for next round.
         for (View each : disabledViews){
             each.setEnabled(true);
         }
         disabledViews.clear();
-
-        // Initialize variables for counts
         wrongGuesses = 0;
         replacedLetters = 0;
         foundLetter = false;
@@ -535,10 +545,13 @@ public class SinkOrSignActivity extends AppCompatActivity {
                 null, getPackageName()));
     }
 
+    /**
+     * Listener for the Instruction button that provides a pop-up dialogfragment with instructions
+     * for ASL Sink or Sign.
+     */
     public void onClickInstructionsListener(View view) {
         DialogFragment fragment = new SinkOrSignInstructions();
         fragment.show(getSupportFragmentManager(), "instructions");
-
     }
 }
 
