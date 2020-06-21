@@ -151,6 +151,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
      */
     public void onClickSubmit(View view) {
         String guess = wordGuessText.getText().toString().toLowerCase();
+        wordGuessText.setEnabled(false);
 
         if(guess.equals(spellingWord)) {
             checkGuessDisplay.setText("Correct!");
@@ -175,6 +176,7 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.VISIBLE);
         wordGuessText.setText("");
+        wordGuessText.setEnabled(true);
 
         getWord();
         setWord();

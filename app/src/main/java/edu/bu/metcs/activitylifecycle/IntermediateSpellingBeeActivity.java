@@ -157,6 +157,7 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
      */
     public void onClickSubmit(View view) {
         String guess = wordGuessText.getText().toString().toLowerCase();
+        wordGuessText.setEnabled(false);
 
         // Checks user response against correct answer.
         if(guess.equals(spellingWord)) {
@@ -184,6 +185,8 @@ public class IntermediateSpellingBeeActivity extends AppCompatActivity {
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.VISIBLE);
         wordGuessText.setText("");
+        wordGuessText.setEnabled(true);
+
 
         // Get a new word and set up appropriate flipper
         getWord();

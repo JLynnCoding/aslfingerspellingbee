@@ -126,6 +126,7 @@ public class LetterQuizActivity extends AppCompatActivity {
         submitButton.setVisibility(View.INVISIBLE);
         checkGuessDisplay.setVisibility(View.VISIBLE);
         nextButton.setVisibility(View.VISIBLE);
+        guessLetter.setEnabled(false);
     }
 
     /**
@@ -136,6 +137,7 @@ public class LetterQuizActivity extends AppCompatActivity {
         checkGuessDisplay.setVisibility(View.INVISIBLE);
         submitButton.setVisibility(View.VISIBLE);
         guessLetter.setText("");
+        guessLetter.setEnabled(true);
         alphabet.getNextLetter();
         Log.i("Track", alphabet.getCurrentLetter() + " is the letter");
         getLetter();

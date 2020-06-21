@@ -7,16 +7,25 @@ package edu.bu.metcs.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 public class MainMenuActivity extends AppCompatActivity {
 
+    private int REQUEST_CODE = 101;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main_menu);
+
+        Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this, REQUEST_CODE, intent, 0);
+        AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
+        am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), am.INTERVAL_DAY*2, pendingIntent);
     }
 
     /**
