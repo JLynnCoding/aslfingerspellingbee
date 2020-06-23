@@ -111,14 +111,6 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
     }
 
     /**
-     * Changes visibility of the buttons after answer button is clicked.
-     */
-    public void reveal() {
-        answerButton.setVisibility(View.INVISIBLE);
-        nextCardButton.setVisibility(View.VISIBLE);
-    }
-
-    /**
      * Advances to next flashcard.
      */
     public void onClickNextCard(View view) {
@@ -135,6 +127,14 @@ public class FlashcardActivity extends AppCompatActivity implements Acceleromete
             englishLetter.setVisibility(View.INVISIBLE);
             advance();
         }
+    }
+
+    /**
+     * Changes visibility of the buttons after answer button is clicked.
+     */
+    public void reveal() {
+        answerButton.setVisibility(View.INVISIBLE);
+        nextCardButton.setVisibility(View.VISIBLE);
     }
 
     /**

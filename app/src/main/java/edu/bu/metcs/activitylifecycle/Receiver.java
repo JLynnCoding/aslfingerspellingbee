@@ -35,7 +35,8 @@ public class Receiver extends BroadcastReceiver {
                 reminderIntent, 0);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            reminderNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            reminderNotificationManager = (NotificationManager) context.getSystemService
+                    (Context.NOTIFICATION_SERVICE);
             String channelId = "101";
 
             CharSequence name = "Reminder Channel";

@@ -145,7 +145,6 @@ public class LetterQuizActivity extends AppCompatActivity {
             gamesLost++;
             sharedPrefEditor.putInt("gamesLostLetter", gamesLost);
         }
-
         sharedPrefEditor.apply();
 
         submitButton.setVisibility(View.INVISIBLE);
