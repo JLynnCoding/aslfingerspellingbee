@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Main Menu Layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainMenuActivity">
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo" />
+
+    <Button
+        android:id="@+id/alphabetChartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alphabetChartClick"
+        android:text="@string/asl_alphabet_chart"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/alphabetFlashCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="flashcardClick"
+        android:text="@string/asl_alphabet_flashcards"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/letterquiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="letterQuizClick"
+        android:text="@string/asl_letter_quiz"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/beginnerspellingbee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="beginnerSpellingClick"
+        android:text="@string/asl_beginner_spellingbee"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/intermediateSpellingBeeHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="intermediateSpellingClick"
+        android:text="@string/asl_intermediate_spellingbee"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/sinkorsign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sinkOrSignClick"
+        android:text="@string/sink_or_sign"
+        android:drawableLeft="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+    <Button
+        android:id="@+id/statistics_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:onClick="getStatsClick"
+        android:text="@string/asl_fingerspelling_bee_statistics"
+        android:drawableLeft="@drawable/bee"
+        android:drawableRight="@drawable/bee"
+        android:contentDescription="@string/bee"/>
+
+</LinearLayout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Sink or Sign Layout-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SinkOrSignActivity">
+
+    <!--Sink or Sign Logo and Heading-->
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:contentDescription="@string/asl_fingerspelling_bee_logo"
+        android:src="@drawable/asl_fingerspelling_bee_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sinkorsignheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/sink_or_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoView" />
+
+    <!--Shark Attack View-->
+    <ImageView
+        android:id="@+id/sharkattack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:contentDescription="@string/shark_is_coming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sinkorsignheading"
+        app:srcCompat="@drawable/shark1" />
+
+    <!--Display of Word to be Solved-->
+    <ImageView
+        android:id="@+id/letterGraphic1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic1"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic3"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic2"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic4"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic3"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic5"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic4"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic6"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic5"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic7"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic6"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic8"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic7"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic9"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic8"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic10"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic9"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic11"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic10"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic12"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic11"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/letterGraphic13"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letterGraphic12"
+        app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        app:layout_constraintWidth_percent=".07"
+        app:srcCompat="@drawable/line" />
+
+    <!--Activity Results Display-->
+    <TextView
+        android:id="@+id/gameProgressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letterGraphic6" />
+
+    <!--Hand Sign Keyboard-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letterGraphic6"
+        tools:context=".SinkOrSignActivity">
+
+        <!--Table for American Manual Alphabet-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="a"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/a" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="b"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/b" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="c"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/c" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="d"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/d" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="e"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/e" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="f"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/f" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="g"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/g" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="h"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/h" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="i"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/i" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="j"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/j" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="k"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/k" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="l"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/l" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="m"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/m" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="n"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/n" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="o"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/o" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="p"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/p" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="q"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/q" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="r"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/r" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="s"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/s" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="t"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/t" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="u"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/u" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="v"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/v" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="w"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/w" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="x"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/x" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="y"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/y" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="z"
+                    android:onClick="onClickSign"
+                    android:src="@drawable/z" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickNextWord"
+        android:text="@string/next_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <!--Sink or Sign Instructions-->
+    <ImageView
+        android:id="@+id/instructionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickInstructionsListener"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
