@@ -49,105 +49,144 @@
         android:id="@+id/letterGraphic1"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="155dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic2"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic1"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic3"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic4"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic2"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic4"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic5"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic3"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic5"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic6"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic4"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic6"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic7"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic5"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic7"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic8"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic6"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic8"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic9"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic7"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic9"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic10"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic8"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic10"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic11"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic9"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic11"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic12"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic10"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic12"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/letterGraphic13"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic11"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/letterGraphic13"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/letterGraphic12"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <!--Displays Results of Activity-->
@@ -418,9 +457,9 @@
         android:id="@+id/instructionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickInstructionsListener"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="onClickInstructionsListener"
         app:srcCompat="@android:drawable/ic_menu_info_details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,6 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -70,6 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -83,6 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -96,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -107,6 +111,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic4"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -118,6 +123,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic5"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -129,6 +135,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic6"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -140,6 +147,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic7"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -151,6 +159,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic8"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -162,6 +171,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic9"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -173,6 +183,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic10"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -184,6 +195,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic11"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <ImageView
@@ -195,6 +207,7 @@
         app:layout_constraintStart_toEndOf="@+id/letterGraphic12"
         app:layout_constraintTop_toBottomOf="@+id/sharkattack"
         app:layout_constraintWidth_percent=".07"
+        android:contentDescription="@string/default_letter"
         app:srcCompat="@drawable/line" />
 
     <!--Activity Results Display-->

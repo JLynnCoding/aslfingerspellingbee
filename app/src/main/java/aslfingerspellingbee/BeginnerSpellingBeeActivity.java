@@ -133,28 +133,28 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
             letterGraphic4.setContentDescription("" + spellingWord.charAt(3));
             letterGraphic4.setVisibility(View.VISIBLE);
         } else {
-            letterGraphic4.setVisibility(View.INVISIBLE);
+            letterGraphic4.setVisibility(View.GONE);
         }
         if (spellingWord.length()>4){
             letterGraphic5.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(4), null, getPackageName()));
             letterGraphic5.setContentDescription("" + spellingWord.charAt(4));
             letterGraphic5.setVisibility(View.VISIBLE);
         } else {
-            letterGraphic5.setVisibility(View.INVISIBLE);
+            letterGraphic5.setVisibility(View.GONE);
         }
         if (spellingWord.length()>5){
             letterGraphic6.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(5), null, getPackageName()));
             letterGraphic6.setContentDescription("" + spellingWord.charAt(5));
             letterGraphic6.setVisibility(View.VISIBLE);
         } else {
-            letterGraphic6.setVisibility(View.INVISIBLE);
+            letterGraphic6.setVisibility(View.GONE);
         }
         if (spellingWord.length()>6){
             letterGraphic7.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(6), null, getPackageName()));
             letterGraphic7.setContentDescription("" + spellingWord.charAt(6));
             letterGraphic7.setVisibility(View.VISIBLE);
         } else {
-            letterGraphic7.setVisibility(View.INVISIBLE);
+            letterGraphic7.setVisibility(View.GONE);
         }
     }
 

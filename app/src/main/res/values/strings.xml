@@ -34,4 +34,5 @@
     <string name="asl_sink_or_sign_statistics">ASL Sink or Sign Statistics</string>
     <string name="channel_name">Reminder</string>
     <string name="channel_description">reminders</string>
+    <string name="default_letter">letter</string>
 </resources>
