@@ -31,7 +31,7 @@ public class MainMenuActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this,
                 101, intent, 0);
         AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
-        am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), (am.INTERVAL_DAY*2),
+        am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), (1000 * 60 * 60 * 48),
                 pendingIntent);
     }
 
