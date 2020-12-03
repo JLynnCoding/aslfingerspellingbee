@@ -26,13 +26,15 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main_menu);
-
+        /** # Notification suspended until fixed
+         *         PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this,
+         *                 101, intent, 0);
+         *         AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
+         *         am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), (1000 * 60 * 60 * 48),
+         *                 pendingIntent);
+         */
         Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainMenuActivity.this,
-                101, intent, 0);
-        AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
-        am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), (1000 * 60 * 60 * 48),
-                pendingIntent);
+
     }
 
     /**
