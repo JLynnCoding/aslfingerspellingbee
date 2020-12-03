@@ -1,9 +1,8 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 2
+ * ASL Fingerspelling Bee
  * Activity for ASL Beginner Spelling Bee, which displays a 3-7 letter word as hand signs from
- * the American Manual Alphabet and asks the user to guess the word.
- * Update Project Iteration 5: Added onKeyListener, savedInstanceState, and statistics to be
- * stored in SharedPreferences.
+ * the American Manual Alphabet and asks the user to guess the word. Added onKeyListener,
+ * savedInstanceState, and statistics to be stored in SharedPreferences.
  */
 
 package aslfingerspellingbee;
@@ -120,37 +119,44 @@ public class BeginnerSpellingBeeActivity extends AppCompatActivity {
         spellingWord = correctWord.toLowerCase();
 
         // Sets first 3 hand signs because all words are 3 or more letters.
-        letterGraphic1.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(0), null, getPackageName()));
+        letterGraphic1.setImageResource(getResources().getIdentifier("@drawable/" +
+                spellingWord.charAt(0), null, getPackageName()));
         letterGraphic1.setContentDescription("" + spellingWord.charAt(0));
-        letterGraphic2.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(1), null, getPackageName()));
+        letterGraphic2.setImageResource(getResources().getIdentifier("@drawable/" +
+                spellingWord.charAt(1), null, getPackageName()));
         letterGraphic2.setContentDescription("" + spellingWord.charAt(1));
-        letterGraphic3.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(2), null, getPackageName()));
+        letterGraphic3.setImageResource(getResources().getIdentifier("@drawable/" +
+                spellingWord.charAt(2), null, getPackageName()));
         letterGraphic3.setContentDescription("" + spellingWord.charAt(2));
 
         // Checks if word is longer than 3 letters up to maximum, and sets hand signs appropriately.
         if (spellingWord.length()>3){
-            letterGraphic4.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(3), null, getPackageName()));
+            letterGraphic4.setImageResource(getResources().getIdentifier("@drawable/" +
+                    spellingWord.charAt(3), null, getPackageName()));
             letterGraphic4.setContentDescription("" + spellingWord.charAt(3));
             letterGraphic4.setVisibility(View.VISIBLE);
         } else {
             letterGraphic4.setVisibility(View.GONE);
         }
         if (spellingWord.length()>4){
-            letterGraphic5.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(4), null, getPackageName()));
+            letterGraphic5.setImageResource(getResources().getIdentifier("@drawable/" +
+                    spellingWord.charAt(4), null, getPackageName()));
             letterGraphic5.setContentDescription("" + spellingWord.charAt(4));
             letterGraphic5.setVisibility(View.VISIBLE);
         } else {
             letterGraphic5.setVisibility(View.GONE);
         }
         if (spellingWord.length()>5){
-            letterGraphic6.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(5), null, getPackageName()));
+            letterGraphic6.setImageResource(getResources().getIdentifier("@drawable/" +
+                    spellingWord.charAt(5), null, getPackageName()));
             letterGraphic6.setContentDescription("" + spellingWord.charAt(5));
             letterGraphic6.setVisibility(View.VISIBLE);
         } else {
             letterGraphic6.setVisibility(View.GONE);
         }
         if (spellingWord.length()>6){
-            letterGraphic7.setImageResource(getResources().getIdentifier("@drawable/" + spellingWord.charAt(6), null, getPackageName()));
+            letterGraphic7.setImageResource(getResources().getIdentifier("@drawable/" +
+                    spellingWord.charAt(6), null, getPackageName()));
             letterGraphic7.setContentDescription("" + spellingWord.charAt(6));
             letterGraphic7.setVisibility(View.VISIBLE);
         } else {

@@ -1,7 +1,6 @@
 /**
- *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 4
+ *  SL Fingerspelling Bee
  *  Class for the Intermediate Fingerspelling Bee Activity
- *  Update Project Iteration 5
  *  Added Statistics for storage in SharedPreferences and SavedInstanceState to allow for seamless
  *  recreation of the activity. Added onKeyListener to advance to onClickSubmit when user hits
  *  "Enter" key. Also added SeekBar to allow the user to dynamically adjust the

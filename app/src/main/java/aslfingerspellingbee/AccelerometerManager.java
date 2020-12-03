@@ -1,7 +1,5 @@
 /**
- *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 3
  *  Class that sets up the Observable for the accelerometer.
- *  Project Iteration 5
  *  Updated sensitivity settings to make the shake detection less sensitive.
  */
 

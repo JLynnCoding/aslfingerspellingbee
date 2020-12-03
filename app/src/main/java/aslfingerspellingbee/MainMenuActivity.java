@@ -1,9 +1,6 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
- * Activity for Main Menu.
- * Updated Project Iteration 5:
- * Added Sink or Sign activity intent, added Statistics Activity intent, and set up Practice
- * Reminder Notification with AlarmManager.
+ * ASL Fingerspelling Bee
+ * Activity for Main Menu with buttons for all activity options.
  */
 
 package aslfingerspellingbee;
@@ -33,7 +30,8 @@ public class MainMenuActivity extends AppCompatActivity {
          *         am.setRepeating(am.RTC_WAKEUP, System.currentTimeMillis(), (1000 * 60 * 60 * 48),
          *                 pendingIntent);
          */
-        Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
+        // Hook for possible future notificaton functionality
+        //Intent intent = new Intent(MainMenuActivity.this, Receiver.class);
 
     }
 

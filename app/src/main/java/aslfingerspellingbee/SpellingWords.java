@@ -1,5 +1,5 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 2
+ * ASL Fingerspelling Bee
  * Class that creates and manages ArrayList of Beginner Fingerspelling Bee Words and provides data
  * needed for app features. Reads list of words from files.
  * Updated Project Iteration 5 to add Advanced Spelling List with second constructor.

@@ -1,5 +1,5 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee Statistics - Project Iteration 5
+ * ASL Fingerspelling Bee Statistics
  * Activity for calculating, displaying, and clearing saved statistics from all of the app's
  * activities, as saved in SharedPreferences.
  */

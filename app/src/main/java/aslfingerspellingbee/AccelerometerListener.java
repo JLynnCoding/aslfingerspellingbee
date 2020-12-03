@@ -1,7 +1,7 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 3
+ * ASL Fingerspelling Bee
  * Interface for the use of the accelerometer for use with features that are dependent on shake
- * detection..
+ * detection.
  */
 package aslfingerspellingbee;
 

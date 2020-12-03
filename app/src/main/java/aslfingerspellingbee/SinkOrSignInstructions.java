@@ -1,5 +1,4 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 5
  * Class that sets up DialogFragment for Instructions button for ASL Sink or Sign.
  */
 

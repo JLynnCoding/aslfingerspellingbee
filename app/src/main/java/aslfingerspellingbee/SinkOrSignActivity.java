@@ -1,5 +1,4 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 5
  * Class that manages the "ASL Sink or Sign" feature, which displays a random word from the
  * advanced spelling list and displays it hidden to the user. As the user guesses letters,
  * it fills in the letters and hand signs. The user must solve the word before guessing 7 wrong

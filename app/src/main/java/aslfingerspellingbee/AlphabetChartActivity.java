@@ -1,5 +1,5 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
+ *ASL Fingerspelling Bee
  * Activity for Alphabet Chart.
  */
 

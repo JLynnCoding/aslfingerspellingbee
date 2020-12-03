@@ -1,10 +1,9 @@
 /**
- *  Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 3
+ *  ASL Fingerspelling Bee
  *  Class for the ASL Letter Quiz Activity.
- *  Update Project Iteration 5
  *  Added Statistics for storage in SharedPreferences and SavedInstanceState to allow for seamless
  *  recreation of the activity. Added onKeyListener to advance to onClickSubmit when user hits
- *  "Enter" key. d
+ *  "Enter" key.
  */
 
 package aslfingerspellingbee;

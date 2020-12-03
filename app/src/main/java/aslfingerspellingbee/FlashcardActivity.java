@@ -1,15 +1,10 @@
 /**
- * Jamie Lynn Lufrano - ASL Fingerspelling Bee - Project Iteration 1
+ * ASL Fingerspelling Bee
  * Activity for Alphabet Flashcards. Shows sign, then allows user to click "Answer" for the English
- * letter.
- * Project Iteration 2
- * Offers reverse functionality. User can toggle letterSwitch to see the English letter first, then
- * the ASL hand sign for that letter.
- * Project Iteration 3
- * Added shake to shuffle functionality.
- * Project Iteration 5
- * Added SavedInstanceState to make sure flashcards continue from where they left off when the
- * orientation changes or the app is otherwise interrupted.
+ * letter as well as reverse functionality. User can toggle letterSwitch to see the English letter
+ * first, then the ASL hand sign for that letter. Shake to shuffle functionality was added here as
+ * well. Added SavedInstanceState to make sure flashcards continue from where they left off when
+ * the orientation changes or the app is otherwise interrupted.
  */
 
 package aslfingerspellingbee;

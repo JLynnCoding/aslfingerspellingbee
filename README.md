@@ -8,6 +8,9 @@ READ ME:
 ASL Fingerspelling Bee is an Android app that can be run on Android mobile phones and tablet 
 devices running Sdk version 21 or higher (or equivalent emulators). 
 
+THANK YOU:
+All manual alphabet artwork courtesy of Joe Hogan (https://www.deviantart.com/joehoganart).
+
 CONTACT:
 If you have any issues, questions, ideas, or feedback, please contact us at devjlynn@gmail.com
 
